@@ -13,7 +13,7 @@ public class LoadParamsFromXML : MonoBehaviour {
     public string steg = "gitter";
 
     //Muster
-    public int punktdichte = 50;
+    public int punktdichte = 100;
     public string drehrichtung = "rechts";
     public int drehgeschwindigkeit = 50;
     public Color minimumFarbe = new Color(0,0,0);
