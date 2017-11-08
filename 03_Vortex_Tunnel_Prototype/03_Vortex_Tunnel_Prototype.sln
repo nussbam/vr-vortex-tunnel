@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "03_Vortex_Tunnel_Prototype.csproj", "{B0836DE4-0535-780C-61A5-5DDA349CD8FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype.Editor", "03_Vortex_Tunnel_Prototype.Editor.csproj", "{06F58191-158C-0368-0F7C-05DB4BEA4279}"

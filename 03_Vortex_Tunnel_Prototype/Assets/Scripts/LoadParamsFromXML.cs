@@ -7,7 +7,7 @@ public class LoadParamsFromXML : MonoBehaviour {
     public bool intro = false;
 
     //Strecke
-    public float laenge = 20;
+    public float laenge = 40;
     public float durchmesser = 4;
     public string kurve = "keine";
     public string steg = "gitter";
@@ -15,7 +15,7 @@ public class LoadParamsFromXML : MonoBehaviour {
     //Muster
     public int punktdichte = 100;
     public string drehrichtung = "rechts";
-    public int drehgeschwindigkeit = 50;
+    public int drehgeschwindigkeit = 200;
     public Color minimumFarbe = new Color(0,0,0);
     public Color maximumFarbe = new Color(1,1,1);
 
