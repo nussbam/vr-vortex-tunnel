@@ -1,0 +1,28 @@
+<VortexTunnel>
+  
+  <Intro>on</Intro> <!--Intro-Szenario zur Angewöhnung an VR (on/off)-->
+  
+	<Strecke>
+		<Laenge>20</Laenge> <!--Die Länge des Tunnels in Unity-"Metern"-->
+		<Durchmesser>4.0</Durchmesser> <!--Der Durchmesser des Tunnels in Unity-"Metern"-->
+		<Kurve>keine</Kurve> <!--links/rechts/keine (90°Kurve)-->
+		<Steg>grau</Steg> <!--schwarz/grau/gitter (Die Beschaffenheit des Stegs) -->
+	</Strecke>
+    
+	<Muster>
+		<Punktdichte>50</Punktdichte> <!--Dichte der Farbpunkte im Muster (0 = keine Punkte, 100 = maximale Dichte) -->
+		<Drehrichtung>rechts</Drehrichtung> <!-- Drehrichtung des Wandmusters (links/rechts/(beide)) -->
+		<Drehgeschwindigkeit>50</Drehgeschwindigkeit> <!--Drehgeschwindigkeit des Musters (0 = statisch, 100 = max. Geschwindigkeit) -->
+    
+		<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
+			<MinimumRot>0</MinimumRot>
+			<MaximumRot>255</MaximumRot>
+			<MinimumGruen>0</MinimumGruen>
+			<MaximumGruen>255</MaximumGruen>
+			<MinimumBlau>0</MinimumBlau>
+			<MaximumBlau>255</MaximumBlau>
+		</Farbe>
+  
+	</Muster>
+
+</VortexTunnel>
