@@ -8,7 +8,7 @@ public class BuildTunnel : MonoBehaviour {
  
 	// Create the tunnel
 	void Start () {
-        tunnelParams.LoadParams("C://temp//vortexparams.xml");
+        tunnelParams.LoadParams(Application.dataPath + "//vortexparams.xml");
 
 
         float distance = 0;
