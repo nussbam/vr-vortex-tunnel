@@ -1,30 +1,31 @@
 ﻿<VortexTunnel intro="off" durchmesser="10">
-    
-	<Abschnitt> <!--Tunnelabschnitt -->
-		<Typ>gerade</Typ>
-		<Steg>gitter</Steg>
-		<Laenge>10</Laenge>
-		<Wandmuster>
-			<Textur>
-				<Name>muster.png</Name>
-				<Drehrichtung>rechts</Drehrichtung>
-				<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
-			</Textur>
-			<Lichter>
-				<Anzahl>100</Anzahl>
-				<Drehrichtung>rechts</Drehrichtung>
-				<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
-				<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
-					<MinimumRot>0</MinimumRot>
-					<MaximumRot>255</MaximumRot>
-					<MinimumGruen>0</MinimumGruen>
-					<MaximumGruen>255</MaximumGruen>
-					<MinimumBlau>0</MinimumBlau>
-					<MaximumBlau>255</MaximumBlau>
-				</Farbe>
-			</Lichter>
-		</Wandmuster>
-	</Abschnitt>
+    <Abschnitte>
+		<Abschnitt> <!--Tunnelabschnitt -->
+			<Typ>gerade</Typ>
+			<Steg>gitter</Steg>
+			<Laenge>10</Laenge>
+			<Wandmuster>
+				<Textur>
+					<Name>muster.png</Name>
+					<Drehrichtung>rechts</Drehrichtung>
+					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+				</Textur>
+				<Lichter>
+					<Anzahl>100</Anzahl>
+					<Drehrichtung>rechts</Drehrichtung>
+					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
+						<MinimumRot>0</MinimumRot>
+						<MaximumRot>255</MaximumRot>
+						<MinimumGruen>0</MinimumGruen>
+						<MaximumGruen>255</MaximumGruen>
+						<MinimumBlau>0</MinimumBlau>
+						<MaximumBlau>255</MaximumBlau>
+					</Farbe>
+				</Lichter>
+			</Wandmuster>
+		</Abschnitt>
+	</Abschnitte>
 	
 	<!-- Weitere Abschnitte können hinzugefügt werden (Reihenfolge!)
 	<Abschnitt>
