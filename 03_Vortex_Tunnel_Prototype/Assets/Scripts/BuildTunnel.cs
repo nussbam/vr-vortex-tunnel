@@ -8,34 +8,52 @@ public class BuildTunnel : MonoBehaviour {
  
 	// Create the tunnel
 	void Start () {
+        tunnelParams.LoadParams("C://temp//vortexparams.xml");
 
-        
-        //Create Tunnel Object from Prefab
-        GameObject tunnel = (GameObject)Instantiate(Resources.Load("Tunnel_Straight"));
-        tunnel.transform.position = new Vector3(0, 0, 0);
 
-        //Modify Tunnel Object according to params
-        tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, tunnelParams.laenge);
-        
-        //Create Spotlights along the tunnel
-
-        for (int i = 0; i < 200; i++)
+        float distance = 0;
+        foreach(Section section in tunnelParams.sections)
         {
+
             
-            GameObject spotlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
-            GameObject spotlight_child = spotlight.transform.GetChild(0).gameObject;
-            spotlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser/2 - 0.5f, 0, 0));
-            spotlight.transform.position = new Vector3(0, 0,Random.Range(0,tunnelParams.laenge)); //randomize position
-            spotlight.transform.Rotate(Vector3.forward, Random.Range(0,360), Space.Self); //randomize orientation
+            GameObject tunnel = (GameObject)Instantiate(Resources.Load("Tunnel_Straight"));
+            tunnel.transform.position = new Vector3(0, 0, distance);
+            //Modify Tunnel Object according to params
+            tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
+            
 
-            float randomizedRed = Random.Range(tunnelParams.minimumFarbe.r, tunnelParams.maximumFarbe.r); //randomize color
-            float randomizedGreen = Random.Range(tunnelParams.minimumFarbe.g, tunnelParams.maximumFarbe.g);
-            float randomizedBlue = Random.Range(tunnelParams.minimumFarbe.b, tunnelParams.maximumFarbe.b);
-            spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
+            //Create Spotlights along the tunnel
 
-            spotlight_child.GetComponent<Light>().intensity = 20;
-            spotlight_child.GetComponent<Light>().range = 0.65f;
+            for (int i = 0; i < section.anzahlLichter; i++)
+            {
+
+                GameObject spotlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
+                GameObject spotlight_child = spotlight.transform.GetChild(0).gameObject;
+                spotlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser / 2 - 0.5f, 0, 0));
+                spotlight.transform.position = new Vector3(0, 0, Random.Range(distance, distance + section.laenge)); //randomize position
+                spotlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
+
+                var script = spotlight.GetComponent<RotateSpotlight>();
+                script.speed = section.drehgeschwindigkeit;
+
+
+                float randomizedRed = Random.Range(section.minimumFarbe.r, section.maximumFarbe.r); //randomize color
+                float randomizedGreen = Random.Range(section.minimumFarbe.g, section.maximumFarbe.g);
+                float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
+                spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
+
+                spotlight_child.GetComponent<Light>().intensity = 20;
+                spotlight_child.GetComponent<Light>().range = 0.65f;
+            }
+
+            distance = distance + section.laenge;
+            Debug.Log("Bisher " + distance + "zurückgelegt");
         }
+        
+        
+        
+
+        
     }
 	
 	// Update is called once per frame

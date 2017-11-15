@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp-firstpass.csproj", "{B30B281D-7963-49D9-82D3-5E26D553ED94}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp.csproj", "{A569CD74-63A4-3751-6B4A-B0EDAEC75451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp-Editor.csproj", "{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp-firstpass.csproj", "{B30B281D-7963-49D9-82D3-5E26D553ED94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp-Editor-firstpass.csproj", "{33CDA005-3C24-E41C-BBDA-896CF37A2AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Vortex_Tunnel_Prototype", "Assembly-CSharp-Editor.csproj", "{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,22 +15,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A569CD74-63A4-3751-6B4A-B0EDAEC75451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A569CD74-63A4-3751-6B4A-B0EDAEC75451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A569CD74-63A4-3751-6B4A-B0EDAEC75451}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A569CD74-63A4-3751-6B4A-B0EDAEC75451}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30B281D-7963-49D9-82D3-5E26D553ED94}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33CDA005-3C24-E41C-BBDA-896CF37A2AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33CDA005-3C24-E41C-BBDA-896CF37A2AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33CDA005-3C24-E41C-BBDA-896CF37A2AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33CDA005-3C24-E41C-BBDA-896CF37A2AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2D6BD6-4F4D-1EDB-F53B-68136404DEE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

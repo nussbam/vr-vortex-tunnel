@@ -9,7 +9,7 @@ public class VortexTunnel {
     [XmlAttribute("intro")]
     public string intro;
     [XmlAttribute("durchmesser")]
-    public int durchmesser;
+    public float durchmesser;
     [XmlArray("Abschnitte"),XmlArrayItem("Abschnitt")]
     public Abschnitt[] Abschnitt;
     
