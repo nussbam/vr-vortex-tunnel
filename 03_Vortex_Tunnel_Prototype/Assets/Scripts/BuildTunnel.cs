@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BuildTunnel : MonoBehaviour {
 
@@ -9,6 +10,12 @@ public class BuildTunnel : MonoBehaviour {
 	// Create the tunnel
 	void Start () {
         tunnelParams.LoadParams(Application.dataPath + "//vortexparams.xml");
+
+        //Switch to intro scene first, if specified in XML
+        if (tunnelParams.intro)
+        {
+            SceneManager.LoadScene("Intro_Scene");
+        }
 
 
         float distance = 0;
@@ -20,8 +27,30 @@ public class BuildTunnel : MonoBehaviour {
             tunnel.transform.position = new Vector3(0, 0, distance);
             //Modify Tunnel Object according to params
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
-            
+            //Modify Gangplank according to params
+            GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            Material gangplankMaterial;
+            Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
+            gangplank.transform.localScale = new Vector3(1, 0.1f, section.laenge);
+            gangplank.transform.position += new Vector3(0, -1, distance + section.laenge / 2);
+            switch (section.steg.ToLower())
+            {
+                case "gitter":
+                    gangplankMaterial = Resources.Load("Grid", typeof(Material)) as Material;
+                    gangplankRenderer.material = gangplankMaterial;
 
+                    break;
+
+                case "glas":
+                    gangplankMaterial = Resources.Load("Glass", typeof(Material)) as Material;
+                    gangplankRenderer.material = gangplankMaterial;
+                    break;
+                default:
+                    gangplankMaterial = Resources.Load("Grid", typeof(Material)) as Material;
+                    gangplankRenderer.material = gangplankMaterial;
+                    
+                    break;
+            }
             //Create Spotlights along the tunnel
 
             for (int i = 0; i < section.anzahlLichter; i++)
