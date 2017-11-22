@@ -8,7 +8,7 @@ public class Teleporter : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered - Teleporting to Vortex Tunnel");
-        SceneManager.LoadScene("MS4_Parameter");
+        SceneManager.LoadScene("MS3_Prototyp");
     }
     // Use this for initialization
     void Start () {
