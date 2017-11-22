@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,10 +24,11 @@ public class BuildTunnel : MonoBehaviour {
         {
 
             
-            GameObject tunnel = (GameObject)Instantiate(Resources.Load("Tunnel_Straight"));
+            GameObject tunnel = (GameObject)Instantiate(Resources.Load("tunneluvmap"));
             tunnel.transform.position = new Vector3(0, 0, distance);
             //Modify Tunnel Object according to params
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
+            loadTexture(tunnel, Application.dataPath + "/" + section.texture);
             //Modify Gangplank according to params
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Material gangplankMaterial;
@@ -78,15 +80,23 @@ public class BuildTunnel : MonoBehaviour {
             distance = distance + section.laenge;
             Debug.Log("Bisher " + distance + "zurückgelegt");
         }
-        
-        
-        
 
         
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void loadTexture(GameObject gameObject, string path)
+    {
+        Renderer renderer = gameObject.GetComponent<Renderer>();
+        Texture2D texture = Resources.Load("texture_spotlight.png") as Texture2D;
+        renderer.material.color = Color.green;
+        renderer.material.mainTexture = texture;
+    }
+    
+
+
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

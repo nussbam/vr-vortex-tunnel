@@ -56,6 +56,7 @@
      <Compile Include="Assets\loadMainScene.cs" />
      <Compile Include="Assets\Scripts\BuildTextureTunnel.cs" />
      <Compile Include="Assets\Scripts\BuildTunnel.cs" />
+     <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\LoadParamsFromXML.cs" />
      <Compile Include="Assets\Scripts\RotateSpotlight.cs" />
      <Compile Include="Assets\Scripts\Section.cs" />
@@ -168,6 +169,7 @@
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+     <Compile Include="Assets\Teleporter.cs" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />

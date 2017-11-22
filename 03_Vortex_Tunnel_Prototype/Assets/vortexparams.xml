@@ -7,7 +7,7 @@
 			<Laenge>10</Laenge>
 			<Wandmuster>
 				<Textur>
-					<Name>muster.png</Name>
+					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
 				</Textur>
