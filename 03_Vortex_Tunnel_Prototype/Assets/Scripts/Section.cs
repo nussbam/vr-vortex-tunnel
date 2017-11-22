@@ -17,6 +17,9 @@ public class Section : MonoBehaviour {
         public Color minimumFarbe;
         public Color maximumFarbe;
         public int texturgeschwindigkeit;
+        public string texturRichtung;
+        public float lichtIntensitaet;
+        public float lichtReichweite;
 
     
 }

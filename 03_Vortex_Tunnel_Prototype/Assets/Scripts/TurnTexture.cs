@@ -18,7 +18,7 @@ public class TurnTexture : MonoBehaviour {
     void Update()
     {
         Debug.Log(speed);
-        offset.x = direction * (offset.x + speed * Time.deltaTime);
+        offset.x = offset.x + (direction * speed) * Time.deltaTime;
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.mainTextureOffset = offset;
 

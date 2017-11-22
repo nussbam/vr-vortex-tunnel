@@ -36,7 +36,7 @@ public class BuildTunnel : MonoBehaviour {
             //Modify Tunnel Object according to params
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
             loadTexture(tunnel, Application.dataPath + "/" + section.texture);
-            setTextureRotation(tunnel, 1, section.texturgeschwindigkeit);
+            setTextureRotation(tunnel, section.texturRichtung, section.texturgeschwindigkeit);
             //Modify Gangplank according to params
             GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
             handrail.transform.position = new Vector3(0, -0.3f, distance - tunnelStart);
@@ -88,8 +88,8 @@ public class BuildTunnel : MonoBehaviour {
                 float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
                 spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
 
-                spotlight_child.GetComponent<Light>().intensity = 1;
-                spotlight_child.GetComponent<Light>().range = 4f;
+                spotlight_child.GetComponent<Light>().intensity = section.lichtIntensitaet;
+                spotlight_child.GetComponent<Light>().range = section.lichtReichweite;
             }
 
             distance = distance + section.laenge;
@@ -99,10 +99,18 @@ public class BuildTunnel : MonoBehaviour {
         
     }
 
-    public void setTextureRotation(GameObject gameObject, int direction, float speed)
+    public void setTextureRotation(GameObject gameObject, string direction, float speed)
     {
+        int directionInt;
+        if(direction.ToLower() == "rechts")
+        {
+            directionInt = -1;
+        }else
+        {
+            directionInt = 1;
+        }
         TurnTexture turner = gameObject.GetComponentInChildren<TurnTexture>();
-        turner.setDirection(1);
+        turner.setDirection(directionInt);
         turner.setSpeed(speed/10);
         gameObject.SetActive(true);
     }

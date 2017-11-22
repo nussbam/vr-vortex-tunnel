@@ -23,6 +23,9 @@ public class LoadParamsFromXML : MonoBehaviour {
             temp.anzahlLichter = abschnitt.Wandmuster.Lichter.Anzahl;
             temp.drehgeschwindigkeit = abschnitt.Wandmuster.Lichter.Drehgeschwindigkeit;
             temp.drehrichtung = abschnitt.Wandmuster.Lichter.Drehrichtung;
+            temp.lichtIntensitaet = abschnitt.Wandmuster.Lichter.Intensitaet;
+            temp.lichtReichweite = abschnitt.Wandmuster.Lichter.Reichweite;
+            temp.texturRichtung = abschnitt.Wandmuster.Textur.Drehrichtung;
             temp.laenge = abschnitt.Laenge;
             temp.steg = abschnitt.Steg;
             temp.texturgeschwindigkeit = abschnitt.Wandmuster.Textur.Drehgeschwindigkeit;

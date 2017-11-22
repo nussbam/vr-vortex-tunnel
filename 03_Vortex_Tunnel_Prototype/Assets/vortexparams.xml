@@ -9,9 +9,11 @@
 				<Textur>
 					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>-4</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>4</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
+          <Reichweite>4</Reichweite>
+          <Intensitaet>20</Intensitaet>
 					<Anzahl>20</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
