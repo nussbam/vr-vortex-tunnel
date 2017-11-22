@@ -9,12 +9,12 @@
 				<Textur>
 					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>2</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
 					<Anzahl>100</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
 					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
 						<MinimumRot>0</MinimumRot>
 						<MaximumRot>1</MaximumRot>
@@ -32,14 +32,14 @@
 			<Laenge>10</Laenge>
 			<Wandmuster>
 				<Textur>
-					<Name>muster.png</Name>
+					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>1</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
 					<Anzahl>10</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>200</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>5</Drehgeschwindigkeit>
 					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
 						<MinimumRot>0</MinimumRot>
 						<MaximumRot>1</MaximumRot>

@@ -24,11 +24,12 @@ public class BuildTunnel : MonoBehaviour {
         {
 
             
-            GameObject tunnel = (GameObject)Instantiate(Resources.Load("tunneluvmap"));
+            GameObject tunnel = (GameObject)Instantiate(Resources.Load("TunnelStraightScaled"));
             tunnel.transform.position = new Vector3(0, 0, distance);
             //Modify Tunnel Object according to params
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
             loadTexture(tunnel, Application.dataPath + "/" + section.texture);
+            setTextureRotation(tunnel, 1, section.texturgeschwindigkeit);
             //Modify Gangplank according to params
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Material gangplankMaterial;
@@ -87,17 +88,28 @@ public class BuildTunnel : MonoBehaviour {
         
     }
 
+    public void setTextureRotation(GameObject gameObject, int direction, float speed)
+    {
+        TurnTexture turner = gameObject.GetComponentInChildren<TurnTexture>();
+        turner.setDirection(1);
+        turner.setSpeed(speed);
+        gameObject.SetActive(true);
+    }
+
     public void loadTexture(GameObject gameObject, string path)
     {
+
         //strip any file-extension that might be around
         string filename = System.IO.Path.GetFileNameWithoutExtension(path);
-        Renderer renderer = gameObject.GetComponent<Renderer>();
+        Renderer renderer = gameObject.GetComponentInChildren<Renderer>();
+
+
         //Important Resources.Load DOES NOT work with file-extensions, it just wants the name like abc instead of abc.txt
         Texture2D texture = Resources.Load(filename) as Texture2D;
         renderer.material.color = Color.green;
         renderer.material.mainTexture = texture;
     }
-    
+
 
 
 

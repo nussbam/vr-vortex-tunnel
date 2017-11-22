@@ -25,6 +25,7 @@ public class LoadParamsFromXML : MonoBehaviour {
             temp.drehrichtung = abschnitt.Wandmuster.Lichter.Drehrichtung;
             temp.laenge = abschnitt.Laenge;
             temp.steg = abschnitt.Steg;
+            temp.texturgeschwindigkeit = abschnitt.Wandmuster.Textur.Drehgeschwindigkeit;
             temp.texture = abschnitt.Wandmuster.Textur.Name;
             temp.typ = abschnitt.Typ;
             temp.minimumFarbe = new Color(

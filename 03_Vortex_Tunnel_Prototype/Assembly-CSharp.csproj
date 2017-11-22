@@ -54,12 +54,14 @@
      <Compile Include="Assets\CameraFarClip.cs" />
      <Compile Include="Assets\ChangeColorXML.cs" />
      <Compile Include="Assets\loadMainScene.cs" />
+     <Compile Include="Assets\rotateTexture.cs" />
      <Compile Include="Assets\Scripts\BuildTextureTunnel.cs" />
      <Compile Include="Assets\Scripts\BuildTunnel.cs" />
      <Compile Include="Assets\Scripts\ColorChange.cs" />
      <Compile Include="Assets\Scripts\LoadParamsFromXML.cs" />
      <Compile Include="Assets\Scripts\RotateSpotlight.cs" />
      <Compile Include="Assets\Scripts\Section.cs" />
+     <Compile Include="Assets\Scripts\TextureParam.cs" />
      <Compile Include="Assets\Scripts\TurnTexture.cs" />
      <Compile Include="Assets\Scripts\XML\Abschnitt.cs" />
      <Compile Include="Assets\Scripts\XML\Farbe.cs" />

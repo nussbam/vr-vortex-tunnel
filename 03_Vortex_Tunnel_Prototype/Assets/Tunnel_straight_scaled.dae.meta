@@ -7,13 +7,21 @@ ModelImporter:
   fileIDToRecycleName:
     100000: Last Saved SketchUp View
     100002: //RootNode
+    100004: skp_camera_Last_Saved_SketchUp_View
     400000: Last Saved SketchUp View
     400002: //RootNode
+    400004: skp_camera_Last_Saved_SketchUp_View
+    2000000: skp_camera_Last_Saved_SketchUp_View
     2300000: //RootNode
     3300000: //RootNode
     4300000: SketchUp
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SketchUV_Texture
+    second: {fileID: 2100000, guid: 738f993e8c27cc44d9fea4f6c0e32471, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
