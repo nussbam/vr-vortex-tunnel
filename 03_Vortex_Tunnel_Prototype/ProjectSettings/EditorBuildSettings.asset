@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro_Scene.unity
     guid: fa4379c6fe0a77c49ab59a9aaf0479e3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MS4_Parameter.unity
     guid: e8752b3ac10aec647a54d826c56d0032
+  - enabled: 1
+    path: Assets/Scenes/MS3_Prototyp.unity
+    guid: 88d4f3ad93b2ebb439256f9914997de6

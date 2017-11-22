@@ -18,11 +18,18 @@ public class BuildTunnel : MonoBehaviour {
             SceneManager.LoadScene("Intro_Scene");
         }
 
-
+        float tunnelStart;
         float distance = 0;
         foreach(Section section in tunnelParams.sections)
         {
-
+            if (distance == 0)
+            {
+                tunnelStart = 3f;
+            }
+            else
+            {
+                tunnelStart = 0;
+            }
             
             GameObject tunnel = (GameObject)Instantiate(Resources.Load("TunnelStraightScaled"));
             tunnel.transform.position = new Vector3(0, 0, distance);
@@ -32,14 +39,14 @@ public class BuildTunnel : MonoBehaviour {
             setTextureRotation(tunnel, 1, section.texturgeschwindigkeit);
             //Modify Gangplank according to params
             GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
-            handrail.transform.position = new Vector3(0, -0.3f, distance);
-            handrail.transform.localScale = new Vector3(1, 1, section.laenge);
+            handrail.transform.position = new Vector3(0, -0.3f, distance - tunnelStart);
+            handrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
 
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Material gangplankMaterial;
             Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
-            gangplank.transform.localScale = new Vector3(1, 0.1f, section.laenge);
-            gangplank.transform.position += new Vector3(0, -1, distance + section.laenge / 2);
+            gangplank.transform.localScale = new Vector3(1, 0.1f, section.laenge + tunnelStart);
+            gangplank.transform.position += new Vector3(0, -1, distance + ( section.laenge - tunnelStart) / 2);
             switch (section.steg.ToLower())
             {
                 case "gitter":
@@ -81,8 +88,8 @@ public class BuildTunnel : MonoBehaviour {
                 float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
                 spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
 
-                spotlight_child.GetComponent<Light>().intensity = 20;
-                spotlight_child.GetComponent<Light>().range = 0.65f;
+                spotlight_child.GetComponent<Light>().intensity = 1;
+                spotlight_child.GetComponent<Light>().range = 4f;
             }
 
             distance = distance + section.laenge;
@@ -96,7 +103,7 @@ public class BuildTunnel : MonoBehaviour {
     {
         TurnTexture turner = gameObject.GetComponentInChildren<TurnTexture>();
         turner.setDirection(1);
-        turner.setSpeed(speed);
+        turner.setSpeed(speed/10);
         gameObject.SetActive(true);
     }
 
@@ -110,7 +117,6 @@ public class BuildTunnel : MonoBehaviour {
 
         //Important Resources.Load DOES NOT work with file-extensions, it just wants the name like abc instead of abc.txt
         Texture2D texture = Resources.Load(filename) as Texture2D;
-        renderer.material.color = Color.green;
         renderer.material.mainTexture = texture;
     }
 

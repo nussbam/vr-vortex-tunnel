@@ -1,18 +1,18 @@
-﻿<VortexTunnel intro="off" durchmesser="10">
+﻿<VortexTunnel intro="off" durchmesser="6">
     
 	<Abschnitte>
 		<Abschnitt> <!--Tunnelabschnitt -->
 			<Typ>gerade</Typ>
 			<Steg>gitter</Steg>
-			<Laenge>10</Laenge>
+			<Laenge>20</Laenge>
 			<Wandmuster>
 				<Textur>
 					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>2</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>-4</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
-					<Anzahl>100</Anzahl>
+					<Anzahl>20</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
 					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
@@ -26,31 +26,7 @@
 				</Lichter>
 			</Wandmuster>
 		</Abschnitt>
-		<Abschnitt> <!--Tunnelabschnitt -->
-			<Typ>gerade</Typ>
-			<Steg>gitter</Steg>
-			<Laenge>10</Laenge>
-			<Wandmuster>
-				<Textur>
-					<Name>spotlight_texture.png</Name>
-					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>1</Drehgeschwindigkeit>
-				</Textur>
-				<Lichter>
-					<Anzahl>10</Anzahl>
-					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>5</Drehgeschwindigkeit>
-					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-255) -->
-						<MinimumRot>0</MinimumRot>
-						<MaximumRot>1</MaximumRot>
-						<MinimumGruen>0</MinimumGruen>
-						<MaximumGruen>1</MaximumGruen>
-						<MinimumBlau>0</MinimumBlau>
-						<MaximumBlau>1</MaximumBlau>
-					</Farbe>
-				</Lichter>
-			</Wandmuster>
-		</Abschnitt>
+		
 	</Abschnitte>
 
 
