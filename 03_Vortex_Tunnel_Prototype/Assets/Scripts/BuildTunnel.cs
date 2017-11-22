@@ -31,6 +31,10 @@ public class BuildTunnel : MonoBehaviour {
             loadTexture(tunnel, Application.dataPath + "/" + section.texture);
             setTextureRotation(tunnel, 1, section.texturgeschwindigkeit);
             //Modify Gangplank according to params
+            GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
+            handrail.transform.position = new Vector3(0, -0.3f, distance);
+            handrail.transform.localScale = new Vector3(1, 1, section.laenge);
+
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Material gangplankMaterial;
             Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
