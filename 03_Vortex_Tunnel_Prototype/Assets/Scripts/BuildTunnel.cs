@@ -53,6 +53,9 @@ public class BuildTunnel : MonoBehaviour {
                     
                     break;
             }
+            
+            gangplankRenderer.material.mainTextureScale = new Vector2(1, section.laenge);
+            
             //Create Spotlights along the tunnel
 
             for (int i = 0; i < section.anzahlLichter; i++)
