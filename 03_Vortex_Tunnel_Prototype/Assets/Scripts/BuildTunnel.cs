@@ -86,8 +86,11 @@ public class BuildTunnel : MonoBehaviour {
 
     public void loadTexture(GameObject gameObject, string path)
     {
+        //strip any file-extension that might be around
+        string filename = System.IO.Path.GetFileNameWithoutExtension(path);
         Renderer renderer = gameObject.GetComponent<Renderer>();
-        Texture2D texture = Resources.Load("texture_spotlight.png") as Texture2D;
+        //Important Resources.Load DOES NOT work with file-extensions, it just wants the name like abc instead of abc.txt
+        Texture2D texture = Resources.Load(filename) as Texture2D;
         renderer.material.color = Color.green;
         renderer.material.mainTexture = texture;
     }
