@@ -12,9 +12,9 @@
 					<Drehgeschwindigkeit>4</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
-					<Reichweite>2</Reichweite>
-					<Intensitaet>10</Intensitaet>
-					<Anzahl>50</Anzahl>
+					<Reichweite>4</Reichweite>
+					<Intensitaet>50</Intensitaet>
+					<Anzahl>10</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
 					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-1) -->
