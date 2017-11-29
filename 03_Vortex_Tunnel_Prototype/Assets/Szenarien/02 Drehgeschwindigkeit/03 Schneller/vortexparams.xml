@@ -9,14 +9,14 @@
 				<Textur>
 					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>2</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>6</Drehgeschwindigkeit>
 				</Textur>
 				<Lichter>
 					<Reichweite>4</Reichweite>
-					<Intensitaet>20</Intensitaet>
+					<Intensitaet>10</Intensitaet>
 					<Anzahl>20</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
-					<Drehgeschwindigkeit>50</Drehgeschwindigkeit>
+					<Drehgeschwindigkeit>150</Drehgeschwindigkeit>
 					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-1) -->
 						<MinimumRot>0</MinimumRot>
 						<MaximumRot>1</MaximumRot>

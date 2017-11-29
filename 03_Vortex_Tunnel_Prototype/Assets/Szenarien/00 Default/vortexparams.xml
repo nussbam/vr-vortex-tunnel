@@ -1,4 +1,4 @@
-﻿<VortexTunnel intro="on" durchmesser="6">
+﻿<VortexTunnel intro="off" durchmesser="6">
     
 	<Abschnitte>
 		<Abschnitt> <!--Tunnelabschnitt -->
@@ -13,7 +13,7 @@
 				</Textur>
 				<Lichter>
 					<Reichweite>4</Reichweite>
-					<Intensitaet>20</Intensitaet>
+					<Intensitaet>10</Intensitaet>
 					<Anzahl>20</Anzahl>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
