@@ -1,0 +1,30 @@
+﻿
+.main{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:10px;
+}
+
+section {
+    background-color:#F6F6F6;
+}
+
+footer {
+    text-align:right;
+    border-top: 1px solid black;
+    margin-top:20px;
+}
+
+img{
+    width:100%;
+}
+
+#content{
+    margin: 0px;
+    width: 100%;
+}
+
+.articleHeader{
+    background-color: #DDDDDD;
+}
