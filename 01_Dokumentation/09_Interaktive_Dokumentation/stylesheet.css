@@ -28,3 +28,16 @@ img{
 .articleHeader{
     background-color: #DDDDDD;
 }
+
+.smallImage{
+    height: auto;
+    width: auto;
+    max-width: 75%;
+    max-height: 75%;
+    margin-bottom: 10px;
+}
+
+ol li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

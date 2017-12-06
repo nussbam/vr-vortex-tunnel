@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
@@ -37,13 +38,13 @@
 
             <section class="container" id="content">
 
-                <article class="col-sm-12">
+                <article class="col-sm-4" style="position:sticky; top:0;">
 
                     <h2>Tutorials</h2>
 
                     <h3>Übersicht</h3>
                     <ul>
-                        <li> <a href="#EinbindungVR">Einbindung von VR in Unity </a> </li>
+                        <li> <a href="#EinbindungVR">Einbindung von VR in Unity </a> <a href="Content/pdfs/Tutorial_Einbindung_von_VR_in_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
                         <li> <a href="#VerwendungGIT">Verwendung von GIT mit Unity </a> </li>
                         <li> <a href="#UnityXML">Lesen einer XML-Datei mit Unity </a> </li>
                         <li> <a href="#ImportAssets">Importieren externer Assets in Unity</a> </li>
@@ -51,6 +52,11 @@
 
                         <li>...?</li>
                     </ul>
+                </article>
+
+                <article class="col-sm-8">
+
+
 
                     <h3 id="EinbindungVR">Einbindung von VR in Unity</h3>
                     <h4>Benötigte Vorkenntnisse</h4>
@@ -69,25 +75,166 @@
                         <ol type="a">
                             <li>Öffne den Asset Store mit Window -> Asset Store</li>
                             <li>Suche im Asset Store nach „SteamVR Plugin“ und wähle dieses aus</li>
-                            <img src="Content/images/tutorials/EinbindungVR/pluginAssetStore.jpg"/>
+                            <img src="Content/images/tutorials/EinbindungVR/pluginAssetStore.jpg" class="smallImage"/>
                             <li>Klicke auf Download und lade das Plugin herunter</li>
                             <li>Klicke im folgenden Dialog auf „All“ und anschliessend auf „Import“</li>
-                            <img src="Content/images/tutorials/EinbindungVR/importUnityPackage.JPG"/>
+                            <img src="Content/images/tutorials/EinbindungVR/importUnityPackage.JPG" class="smallImage"/>
                             <li>Im Dialogfeld „SteamVR_Settings“, klicke auf „Accept All“</li>
-                            <img src="Content/images/tutorials/EinbindungVR/SteamVR_Settings.JPG"/>
-                            <li>Klicke im Popup-Fe</li>
+                            <img src="Content/images/tutorials/EinbindungVR/SteamVR_Settings.JPG" class="smallImage"/>
+                            <li>Klicke im Popup-Fenster auf "Ok"</li>
+                            <img src="Content/images/tutorials/EinbindungVR/theRightChoice.JPG" class="smallImage"/>
+                            <li>Das Plugin ist nun im „Project“-Fenster von Unity als Unterordner von „Assets“ sichtbar</li>
+                            <img src="Content/images/tutorials/EinbindungVR/pluginAvailable.JPG" class="smallImage"/>
+                            <li>Wähle [CameraRig] und [SteamVR] im Ordner „Prefabs“ des heruntergeladenen Plugins aus</li>
+                            <img src="Content/images/tutorials/EinbindungVR/cameraRig.JPG" class="smallImage"/>
+                            <li>Ziehe die beiden selektierten Elemente in das „Hierarchy“ Fenster von Unity.</li>
+                            <img src="Content/images/tutorials/EinbindungVR/hierarchyView.JPG" class="smallImage"/>
+                            <li>Selektiere die Main Camera im Hierarchy-Fenster und drücke die Delete Taste um diese zu löschen. Dies ist notwendig, da es sonst zu Kompatibilitätsproblemen kommt.</li>
+                        </ol>
+                    </ol>
+                    <h4>Referenzen</h4>
+                    <a href="https://www.raywenderlich.com/149239/htc-vive-tutorial-unity">https://www.raywenderlich.com/149239/htc-vive-tutorial-unity</a> (01.11.2017)
+
+
+
+
+                    <h3 id="VerwendungGIT">Verwendung von GIT mit Unity</h3>
+                    <h4>Benötigte Vorkenntnisse</h4>
+                    <ul>
+                        <li>Grundlagen Verwendung von Versionskontrollsystemen</li>
+                        <li>Grundlagen Verwendung GIT über Shell</li>
+                        <li>Grundlagen Verwendung Unity</li>
+                        <li>Verwendung Gitlab</li>
+                    </ul>
+                    <h4>Ziele</h4>
+                    <ul>
+                        <li>Verwaltung eines Unity-Projektes in GIT</li>
+                    </ul>
+                    <h4>Anleitung</h4>
+                    <ol>
+                        <li>Erstellung eines neuen Repository <br/>
+                            Grundsätzlich ist jede Plattform welche GIT anbietet geeignet, in diesem Tutorial verwenden wir Gitlab. Dies da so momentan die Schulprojekte betreut werden.
+                        </li>
+                        <ol type="a">
+                            <li>Bei der Gitlab-Plattform mit deinem Benutzer anmelden</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/enterpriseLabLogin.JPG" class="smallImage"/>
+                            <li>Anschliessend unter «Your Projects» den Punkt «New Project» wählen</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/yourProjects.JPG" class="smallImage"/>
+                            <li>Die Standard-Einstellungen so belassen und nur den Projekt-Namen im Feld «Project Name» auf den gewünschten Namen anpassen. Anschliessend auf «Create project» klicken</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/newProject.JPG" class="smallImage"/>
+                        </ol>
+
+                        <li>Initialisierung des Projektes</li>
+                        <ol type="a">
+                            <li>Im neu erstellten Repository die URL wie folgt kopieren</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/copyURL.jpg" class="smallImage"/>
+                            <li>Anschliessen die Git Bash Konsole im Ordner öffnen, in welchem das Projekt später liegen soll</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/gitBashHere.JPG" class="smallImage"/>
+                            <li>Anschliessend das leere Repository herunterladen per:</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/gitClone.JPG" class="smallImage"/>
+
+                        </ol>
+                        <li>Erstelle oder Kopiere ein Unity-Projekt in den neu erstellten Ordner</li>
+                        <ol type="a">
+                            <li>Öffne die Editor-Settings des Projektes</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/editorSettings.JPG" class="smallImage"/>
+                            <li>Setze unter «Version» den «Mode» auf «Visible Meta Files» und unter «Asset Serialization» den «Mode» auf «Force Text». Dies ist notwendig, damit Unity diese Änderungen nicht in notwendigen Projektdateien anpasst und somit zu Versionskonflikten führt.</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/editorSettings2.JPG" class="smallImage"/>
+                        </ol>
+                        <li>Erstellung einer .gitignore-Datei für Unity-Projektdateien</li>
+                        <ol type="a">
+                            <li>Erstelle eine Text-Datei mit Namen gitignore.txt</li>
+                            <li>Kopiere folgenden Inhalt in diese Textdatei</li>
+                            <p style="font-family: 'Courier New'">
+                                [Ll]ibrary/ <br/>
+                                [Tt]emp/<br/>
+                                [Oo]bj/<br/>
+                                [Bb]uild/<br/>
+                                [Bb]uilds/<br/>
+                                Assets/AssetStoreTools*<br/><br/>
+
+                                # Visual Studio 2015 cache directory<br/>
+                                .vs/<br/><br/>
+
+                                # Autogenerated VS/MD/Consulo solution and project files<br/>
+                                ExportedObj/<br/>
+                                .consulo/<br/>
+                                *.csproj<br/>
+                                *.unityproj<br/>
+                                *.sln<br/>
+                                *.suo<br/>
+                                *.tmp<br/>
+                                *.user<br/>
+                                *.userprefs<br/>
+                                *.pidb<br/>
+                                *.booproj<br/>
+                                *.svd<br/>
+                                *.pdb<br/>
+                                Physics2DSettings.asset<br/>
+                                DynamicsManager.asset<br/><br/>
+
+                                # Unity3D generated meta files<br/>
+                                *.pidb.meta<br/><br/>
+
+                                # Unity3D Generated File On Crash Reports<br/>
+                                sysinfo.txt<br/><br/>
+
+                                # Builds<br/>
+                                *.apk<br/>
+                                *.unitypackage<br/>
+                            </p>
+                            <li>Benenne die Datei zu <b>«.gitignore.»</b> um. Ja Punkt-gitignore-Punkt, dadurch wird die Datei zu «.gitignore» - Windows ist hier komisch.</li>
+                        </ol>
+                        <li>Upload von Änderungen: </li>
+                        <ol type="a">
+                            <li>Im Ordner die Git-Bash öffnen und folgende Befehle eingeben, wobei «Erster Commit» eine beliebige Nachricht für den Commit sein kann</li>
+                            <img src="Content/images/tutorials/VerwendungGIT/gitCommit.JPG" class="smallImage"/>
                         </ol>
                     </ol>
 
-                    <h3 id="VerwendungGIT">Verwendung von GIT mit Unity</h3>
-                    <p>
-                        add tutorial here
-                    </p>
+                    <h4>Mögliche Stolpersteine</h4>
+                    <ul>
+                        <li>Unity-Projekte benötigen viel Speicherplatz, es wird schnell an die Default-Grösse eines Gitlab-Repository gestossen. Dies wird durch die folgende Fehlermeldung angezeigt:
+                            error: unpack failed: unable to create temporary object directory
+                            To https://gitlab.enterpriselab.ch/tcnussba/pawi-vortext-tunnel.git
+                            ! [remote rejected] master -> master (unpacker error)
+                        </li>
+                        <li>
+                            Falls die .gitignore-Datei nicht verwendet wird so gibt es bei jedem Push eines anderen Benutzers ein Konflikt. Dies passiert weil Unity sehr viele temporäre lokale Dateien erzeugt.
+                        </li>
+                        <li>Sind die Editor-Settings nicht wie im Tutorial beschrieben gesetzt so ändert Unity Projekt-Assets was zu Konflikten führt beim Push/Pull.</li>
+                    </ul>
+                    <h4>Referenzen</h4>
+                    <a href="https://github.com/github/gitignore/blob/master/Unity.gitignore">https://github.com/github/gitignore/blob/master/Unity.gitignore</a> (02.12.2017)<br/>
+                    <a href="https://robots.thoughtbot.com/how-to-git-with-unity">https://robots.thoughtbot.com/how-to-git-with-unity</a> (02.12.2017)
+
+
+
+
 
                     <h3 id="UnityXML">Lesen einer XML-Datei mit Unity</h3>
-                    <p>
-                        add tutorial here
-                    </p>
+                    <h4>Benötigte Vorkenntnisse</h4>
+                    <ul>
+                        <li><a href="https://unity3d.com/de/learn/tutorials/projects/roll-ball-tutorial">Grundlagen</a></li>
+                    </ul>
+                    <h4>Ziele</h4>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <h4>Anleitung</h4>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <ol type="a">
+                            <li></li>
+                        </ol>
+                    </ol>
+
+                    <h4>Referenzen</h4>
+                    <a href="https://www.raywenderlich.com/149239/htc-vive-tutorial-unity">https://www.raywenderlich.com/149239/htc-vive-tutorial-unity</a> (01.11.2017)
+
+
 
                     <h3 id="ImportAssets">Importieren externen Assets in Unity</h3>
                     <p>
