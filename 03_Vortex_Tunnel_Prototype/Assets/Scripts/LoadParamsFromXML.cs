@@ -27,10 +27,16 @@ public class LoadParamsFromXML : MonoBehaviour {
             temp.lichtReichweite = abschnitt.Wandmuster.Lichter.Reichweite;
             temp.texturRichtung = abschnitt.Wandmuster.Textur.Drehrichtung;
             temp.laenge = abschnitt.Laenge;
-            temp.steg = abschnitt.Steg;
+
+            temp.stegTextur = abschnitt.Steg.Textur;
+            temp.stegBreite = abschnitt.Steg.Breite;
+            temp.stegHoehe = abschnitt.Steg.Hoehe;
+            temp.stegTransparenz = abschnitt.Steg.Transparenz;
+            temp.gelaender = abschnitt.Steg.Gelaender;
+
             temp.texturgeschwindigkeit = abschnitt.Wandmuster.Textur.Drehgeschwindigkeit;
             temp.texture = abschnitt.Wandmuster.Textur.Name;
-            temp.typ = abschnitt.Typ;
+
             temp.minimumFarbe = new Color(
                 abschnitt.Wandmuster.Lichter.Farbe.MinimumRot,
                 abschnitt.Wandmuster.Lichter.Farbe.MinimumGruen,

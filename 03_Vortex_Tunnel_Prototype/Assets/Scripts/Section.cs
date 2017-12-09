@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class Section : MonoBehaviour {
 
-        //Strecke
-        public float laenge = 40;
-        public string typ = "keine";
-        public string steg = "gitter";
+    //Strecke
+    public float laenge = 40;
 
-        public string texture;
+    public string stegTextur = "gitter";
+    public string gelaender;
+    public float stegHoehe;
+    public float stegBreite;
+    public float stegTransparenz;
+        
 
-        public string drehrichtung;
-        public int drehgeschwindigkeit;
-        public int anzahlLichter;
-        public Color minimumFarbe;
-        public Color maximumFarbe;
-        public int texturgeschwindigkeit;
-        public string texturRichtung;
-        public float lichtIntensitaet;
-        public float lichtReichweite;
+    public string texture;
+
+    public string drehrichtung;
+    public int drehgeschwindigkeit;
+    public int anzahlLichter;
+    public Color minimumFarbe;
+    public Color maximumFarbe;
+    public int texturgeschwindigkeit;
+    public string texturRichtung;
+    public float lichtIntensitaet;
+    public float lichtReichweite;
 
     
 }

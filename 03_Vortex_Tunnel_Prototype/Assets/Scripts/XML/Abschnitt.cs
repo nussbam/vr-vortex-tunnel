@@ -5,8 +5,7 @@ using System.Text;
 
 public class Abschnitt
 {
-    public string Typ;
-    public string Steg;
+    public Steg Steg;
     public int Laenge;
     public Wandmuster Wandmuster;
 }

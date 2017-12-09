@@ -37,17 +37,22 @@ public class BuildTunnel : MonoBehaviour {
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
             loadTexture(tunnel, Application.dataPath + "/" + section.texture);
             setTextureRotation(tunnel, section.texturRichtung, section.texturgeschwindigkeit);
-            //Modify Gangplank according to params
-            GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
-            handrail.transform.position = new Vector3(0, -0.3f, distance - tunnelStart);
-            handrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
+
+            //Modify Gangplank and Handrails according to params
+            if (section.gelaender == "on")
+            {
+                GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
+                handrail.transform.position = new Vector3(0, section.stegHoehe + 0.7f, distance - tunnelStart);
+                handrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
+            }
+            
 
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Material gangplankMaterial;
             Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
-            gangplank.transform.localScale = new Vector3(1, 0.1f, section.laenge + tunnelStart);
-            gangplank.transform.position += new Vector3(0, -1, distance + ( section.laenge - tunnelStart) / 2);
-            switch (section.steg.ToLower())
+            gangplank.transform.localScale = new Vector3(section.stegBreite, 0.1f, section.laenge + tunnelStart);
+            gangplank.transform.position += new Vector3(0, section.stegHoehe, distance + ( section.laenge - tunnelStart) / 2);
+            switch (section.stegTextur.ToLower())
             {
                 case "gitter":
                     gangplankMaterial = Resources.Load("Grid", typeof(Material)) as Material;
