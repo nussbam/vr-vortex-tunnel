@@ -6,9 +6,9 @@
 			<Steg>
 				<Hoehe>-1</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
 				<Breite>1</Breite>
-				<Textur>gitter</Textur> 
+				<Textur>gittersteg.png</Textur> 
 				<Gelaender>on</Gelaender> <!-- "on" = mit Geländer, sonst ohne -->
-				<Transparenz>1</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
+				<Transparenz>0.5</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
 			</Steg>
 			<Wandmuster>
 				<Textur>

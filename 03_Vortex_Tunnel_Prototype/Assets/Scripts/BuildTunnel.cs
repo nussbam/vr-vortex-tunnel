@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class BuildTunnel : MonoBehaviour {
 
     private LoadParamsFromXML tunnelParams = new LoadParamsFromXML();
- 
-	// Create the tunnel
-	void Start () {
+
+
+
+    // Create the tunnel
+    IEnumerator Start () {
         tunnelParams.LoadParams(Application.dataPath + "//vortexparams.xml");
 
         //Switch to intro scene first, if specified in XML
@@ -32,10 +34,12 @@ public class BuildTunnel : MonoBehaviour {
             }
             
             GameObject tunnel = (GameObject)Instantiate(Resources.Load("TunnelStraightScaled"));
+            Renderer tunnelRenderer = tunnel.GetComponentInChildren<Renderer>();
             tunnel.transform.position = new Vector3(0, 0, distance);
+
             //Modify Tunnel Object according to params
             tunnel.transform.localScale = new Vector3(tunnelParams.durchmesser, tunnelParams.durchmesser, section.laenge);
-            loadTexture(tunnel, Application.dataPath + "/" + section.texture);
+            yield return loadTexture(tunnelRenderer, section.texture);
             setTextureRotation(tunnel, section.texturRichtung, section.texturgeschwindigkeit);
 
             //Modify Gangplank and Handrails according to params
@@ -48,60 +52,51 @@ public class BuildTunnel : MonoBehaviour {
             
 
             GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            Material gangplankMaterial;
-            Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
+            
             gangplank.transform.localScale = new Vector3(section.stegBreite, 0.1f, section.laenge + tunnelStart);
             gangplank.transform.position += new Vector3(0, section.stegHoehe, distance + ( section.laenge - tunnelStart) / 2);
-            switch (section.stegTextur.ToLower())
-            {
-                case "gitter":
-                    gangplankMaterial = Resources.Load("Grid", typeof(Material)) as Material;
-                    gangplankRenderer.material = gangplankMaterial;
 
-                    break;
-
-                case "glas":
-                    gangplankMaterial = Resources.Load("Glass", typeof(Material)) as Material;
-                    gangplankRenderer.material = gangplankMaterial;
-                    break;
-                default:
-                    gangplankMaterial = Resources.Load("Grid", typeof(Material)) as Material;
-                    gangplankRenderer.material = gangplankMaterial;
-                    
-                    break;
-            }
-            
+            Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
+            yield return loadTexture(gangplankRenderer, section.stegTextur);
             gangplankRenderer.material.mainTextureScale = new Vector2(1, section.laenge);
+            Color currentColor = gangplankRenderer.material.color;
             
+            currentColor.a = section.stegTransparenz;
+            StandardShaderUtils.ChangeRenderMode(gangplankRenderer.material, StandardShaderUtils.BlendMode.Fade);
+            gangplankRenderer.material.color = currentColor;
+
+
             //Create Spotlights along the tunnel
+            generateLights(section, distance);
 
-            for (int i = 0; i < section.anzahlLichter; i++)
-            {
-
-                GameObject spotlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
-                GameObject spotlight_child = spotlight.transform.GetChild(0).gameObject;
-                spotlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser / 2 - 0.5f, 0, 0));
-                spotlight.transform.position = new Vector3(0, 0, Random.Range(distance, distance + section.laenge)); //randomize position
-                spotlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
-
-                var script = spotlight.GetComponent<RotateSpotlight>();
-                script.speed = section.drehgeschwindigkeit;
-
-
-                float randomizedRed = Random.Range(section.minimumFarbe.r, section.maximumFarbe.r); //randomize color
-                float randomizedGreen = Random.Range(section.minimumFarbe.g, section.maximumFarbe.g);
-                float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
-                spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
-
-                spotlight_child.GetComponent<Light>().intensity = section.lichtIntensitaet;
-                spotlight_child.GetComponent<Light>().range = section.lichtReichweite;
-            }
 
             distance = distance + section.laenge;
-            Debug.Log("Bisher " + distance + "zurückgelegt");
+
         }
 
         
+    }
+
+    public void generateLights(Section section, float distance)
+    {
+        for (int i = 0; i < section.anzahlLichter; i++)
+        {
+            GameObject spotlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
+            GameObject spotlight_child = spotlight.transform.GetChild(0).gameObject;
+            spotlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser / 2 - 0.5f, 0, 0));
+            spotlight.transform.position = new Vector3(0, 0, Random.Range(distance, distance + section.laenge)); //randomize position
+            spotlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
+
+            var script = spotlight.GetComponent<RotateSpotlight>();
+            script.speed = section.drehgeschwindigkeit;
+            float randomizedRed = Random.Range(section.minimumFarbe.r, section.maximumFarbe.r); //randomize color
+            float randomizedGreen = Random.Range(section.minimumFarbe.g, section.maximumFarbe.g);
+            float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
+            spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
+
+            spotlight_child.GetComponent<Light>().intensity = section.lichtIntensitaet;
+            spotlight_child.GetComponent<Light>().range = section.lichtReichweite;
+        }
     }
 
     public void setTextureRotation(GameObject gameObject, string direction, float speed)
@@ -120,17 +115,21 @@ public class BuildTunnel : MonoBehaviour {
         gameObject.SetActive(true);
     }
 
-    public void loadTexture(GameObject gameObject, string path)
+    public IEnumerator loadTexture(Renderer renderer, string path)
     {
 
-        //strip any file-extension that might be around
-        string filename = System.IO.Path.GetFileNameWithoutExtension(path);
-        Renderer renderer = gameObject.GetComponentInChildren<Renderer>();
+        if (!path.Contains("/") || !path.Contains("\\"))
+        {
+            //if there is just a filename it is in the application data
+            path = Application.dataPath + "/" + path;
+        }
+        Debug.Log("Filepath for texture is" + path);
+        WWW picture = new WWW("file://"+path);
+        while (!picture.isDone)
+            yield return null;
+        
+        renderer.material.mainTexture = picture.texture;
 
-
-        //Important Resources.Load DOES NOT work with file-extensions, it just wants the name like abc instead of abc.txt
-        Texture2D texture = Resources.Load(filename) as Texture2D;
-        renderer.material.mainTexture = texture;
     }
 
 
