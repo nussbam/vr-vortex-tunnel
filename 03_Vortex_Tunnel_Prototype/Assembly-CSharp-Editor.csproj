@@ -69,7 +69,6 @@
      <None Include="Assets\vortexparams.xml" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\vortexparams_old.xml" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Szenarien\02 Drehgeschwindigkeit\04 Langsamer\vortexparams.xml" />
      <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
