@@ -51,8 +51,8 @@ public class BuildTunnel : MonoBehaviour {
             }
             
 
-            GameObject gangplank = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            
+            GameObject gangplank = (GameObject)Instantiate(Resources.Load("gangplank"));
+
             gangplank.transform.localScale = new Vector3(section.stegBreite, 0.1f, section.laenge + tunnelStart);
             gangplank.transform.position += new Vector3(0, section.stegHoehe, distance + ( section.laenge - tunnelStart) / 2);
 
@@ -62,7 +62,6 @@ public class BuildTunnel : MonoBehaviour {
             Color currentColor = gangplankRenderer.material.color;
             
             currentColor.a = section.stegTransparenz;
-            StandardShaderUtils.ChangeRenderMode(gangplankRenderer.material, StandardShaderUtils.BlendMode.Fade);
             gangplankRenderer.material.color = currentColor;
 
 
