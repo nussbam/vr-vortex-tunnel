@@ -12,7 +12,7 @@
 			</Steg>
 			<Wandmuster>
 				<Textur>
-					<Name>spotlight_texture.png</Name>
+					<Name>spiral.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>4</Drehgeschwindigkeit>
 				</Textur>
