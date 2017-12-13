@@ -45,9 +45,13 @@ public class BuildTunnel : MonoBehaviour {
             //Modify Gangplank and Handrails according to params
             if (section.gelaender == "on")
             {
-                GameObject handrail = (GameObject)Instantiate(Resources.Load("handrail"));
-                handrail.transform.position = new Vector3(0, section.stegHoehe + 0.7f, distance - tunnelStart);
-                handrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
+                GameObject leftHandrail = (GameObject)Instantiate(Resources.Load("single_handrail"));
+                leftHandrail.transform.position = new Vector3(-section.stegBreite/2, section.stegHoehe + 0.7f, distance - tunnelStart);
+                leftHandrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
+
+                GameObject rightHandrail = (GameObject)Instantiate(Resources.Load("single_handrail"));
+                rightHandrail.transform.position = new Vector3(section.stegBreite / 2, section.stegHoehe + 0.7f, distance - tunnelStart);
+                rightHandrail.transform.localScale = new Vector3(1, 1, section.laenge + tunnelStart);
             }
             
 
