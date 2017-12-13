@@ -55,6 +55,12 @@ public class BuildTunnel : MonoBehaviour {
             gangplank.transform.localScale = new Vector3(section.stegBreite, 0.0001f, section.laenge + tunnelStart);
             gangplank.transform.position += new Vector3(0, section.stegHoehe, distance + ( section.laenge - tunnelStart) / 2);
 
+            //adjust height of camera to height of first gangplank
+            if(distance == 0) { 
+                GameObject vrCam = GameObject.Find("[CameraRig]");
+                vrCam.transform.position = new Vector3(0, section.stegHoehe, 5);
+            }
+
             Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
             yield return loadTexture(gangplankRenderer, section.stegTextur);
             gangplankRenderer.material.mainTextureScale = new Vector2(1, section.laenge);
@@ -67,7 +73,7 @@ public class BuildTunnel : MonoBehaviour {
             //Create Spotlights along the tunnel
             generateLights(section, distance);
 
-
+      
             distance = distance + section.laenge;
 
         }

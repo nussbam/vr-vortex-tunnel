@@ -4,11 +4,11 @@
 		<Abschnitt> <!--Tunnelabschnitt -->
 			<Laenge>10</Laenge>
 			<Steg>
-				<Hoehe>-1</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
-				<Breite>1</Breite>
+				<Hoehe>-2.5</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
+				<Breite>4</Breite>
 				<Textur>gittersteg.png</Textur> 
 				<Gelaender>on</Gelaender> <!-- "on" = mit Geländer, sonst ohne -->
-				<Transparenz>0.5</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
+				<Transparenz>1</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
 			</Steg>
 			<Wandmuster>
 				<Textur>
@@ -37,11 +37,11 @@
 		<Abschnitt> <!--Tunnelabschnitt -->
 			<Laenge>20</Laenge>
 			<Steg>
-				<Hoehe>-1</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
-				<Breite>1</Breite>
+				<Hoehe>-1.5</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
+				<Breite>4</Breite>
 				<Textur>gittersteg.png</Textur> 
 				<Gelaender>on</Gelaender> <!-- "on" = mit Geländer, sonst ohne -->
-				<Transparenz>0.8</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
+				<Transparenz>1</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
 			</Steg>
 			<Wandmuster>
 				<Textur>
