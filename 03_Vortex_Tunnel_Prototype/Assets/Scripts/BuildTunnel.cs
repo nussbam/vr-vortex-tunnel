@@ -14,11 +14,6 @@ public class BuildTunnel : MonoBehaviour {
     IEnumerator Start () {
         tunnelParams.LoadParams(Application.dataPath + "//vortexparams.xml");
 
-        //Switch to intro scene first, if specified in XML
-        if (tunnelParams.intro)
-        {
-            SceneManager.LoadScene("Intro_Scene");
-        }
 
         float tunnelStart;
         float distance = 0;
@@ -57,8 +52,14 @@ public class BuildTunnel : MonoBehaviour {
 
             GameObject gangplank = (GameObject)Instantiate(Resources.Load("gangplank"));
 
-            gangplank.transform.localScale = new Vector3(section.stegBreite, 0.1f, section.laenge + tunnelStart);
+            gangplank.transform.localScale = new Vector3(section.stegBreite, 0.0001f, section.laenge + tunnelStart);
             gangplank.transform.position += new Vector3(0, section.stegHoehe, distance + ( section.laenge - tunnelStart) / 2);
+
+            //adjust height of camera to height of first gangplank
+            if(distance == 0) { 
+                GameObject vrCam = GameObject.Find("[CameraRig]");
+                vrCam.transform.position = new Vector3(0, section.stegHoehe, 5);
+            }
 
             Renderer gangplankRenderer = gangplank.GetComponent<Renderer>();
             yield return loadTexture(gangplankRenderer, section.stegTextur);
@@ -72,7 +73,7 @@ public class BuildTunnel : MonoBehaviour {
             //Create Spotlights along the tunnel
             generateLights(section, distance);
 
-
+      
             distance = distance + section.laenge;
 
         }

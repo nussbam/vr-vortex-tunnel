@@ -1,18 +1,18 @@
-﻿<VortexTunnel intro="off" durchmesser="6">
+﻿<VortexTunnel durchmesser="6">
     
 	<Abschnitte>
 		<Abschnitt> <!--Tunnelabschnitt -->
-			<Laenge>20</Laenge>
+			<Laenge>10</Laenge>
 			<Steg>
-				<Hoehe>-1</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
-				<Breite>1</Breite>
+				<Hoehe>-2.5</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
+				<Breite>4</Breite>
 				<Textur>gittersteg.png</Textur> 
 				<Gelaender>on</Gelaender> <!-- "on" = mit Geländer, sonst ohne -->
-				<Transparenz>0.5</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
+				<Transparenz>1</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
 			</Steg>
 			<Wandmuster>
 				<Textur>
-					<Name>spiral.png</Name>
+					<Name>spotlight_texture.png</Name>
 					<Drehrichtung>rechts</Drehrichtung>
 					<Drehgeschwindigkeit>4</Drehgeschwindigkeit>
 				</Textur>
@@ -34,6 +34,38 @@
 			</Wandmuster>
 		</Abschnitt>
 		
+		<Abschnitt> <!--Tunnelabschnitt -->
+			<Laenge>20</Laenge>
+			<Steg>
+				<Hoehe>-1.5</Hoehe> <!-- vertikale Position des Stegs innerhalb des Tunnels (0 = Mitte) -->
+				<Breite>4</Breite>
+				<Textur>gittersteg.png</Textur> 
+				<Gelaender>on</Gelaender> <!-- "on" = mit Geländer, sonst ohne -->
+				<Transparenz>1</Transparenz> <!-- 1 = keine Transparenz, 0 = durchsichtig -->
+			</Steg>
+			<Wandmuster>
+				<Textur>
+					<Name>spotlight_texture.png</Name>
+					<Drehrichtung>rechts</Drehrichtung>
+					<Drehgeschwindigkeit>8</Drehgeschwindigkeit>
+				</Textur>
+				<Lichter>
+					<Reichweite>3</Reichweite>
+					<Intensitaet>10</Intensitaet>
+					<Anzahl>20</Anzahl>
+					<Drehrichtung>rechts</Drehrichtung>
+					<Drehgeschwindigkeit>100</Drehgeschwindigkeit>
+					<Farbe> <!--Festlegen des Farbspektrums, in welchem das Muster erzeugt wird (Werte 0-1) -->
+						<MinimumRot>0</MinimumRot>
+						<MaximumRot>1</MaximumRot>
+						<MinimumGruen>0</MinimumGruen>
+						<MaximumGruen>1</MaximumGruen>
+						<MinimumBlau>0</MinimumBlau>
+						<MaximumBlau>1</MaximumBlau>
+					</Farbe>
+				</Lichter>
+			</Wandmuster>
+		</Abschnitt>
 		<!-- Weitere Abschnitte können hinzugefügt werden (Reihenfolge!)
 		<Abschnitt>
 			...

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LoadParamsFromXML : MonoBehaviour {
-    //Intro (on/off)
-    public bool intro;
+
     public float durchmesser = 4;
     public LinkedList<Section> sections;
     
@@ -13,7 +12,6 @@ public class LoadParamsFromXML : MonoBehaviour {
     public void LoadParams(string filepath)
     {
         VortexTunnel vortex = VortexTunnel.Load(filepath);
-        intro = vortex.intro == "on";
         sections = new LinkedList<Section>();
         durchmesser = vortex.durchmesser;
 
@@ -49,7 +47,7 @@ public class LoadParamsFromXML : MonoBehaviour {
                 );
 
             sections.AddLast(temp);
-            Debug.Log("Abschitt");
+            Debug.Log("Abschnitt");
             
         }
     }

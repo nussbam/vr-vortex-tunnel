@@ -6,8 +6,7 @@ using System.IO;
 
 [XmlRoot("VortexTunnel")]
 public class VortexTunnel {
-    [XmlAttribute("intro")]
-    public string intro;
+
     [XmlAttribute("durchmesser")]
     public float durchmesser;
     [XmlArray("Abschnitte"),XmlArrayItem("Abschnitt")]
