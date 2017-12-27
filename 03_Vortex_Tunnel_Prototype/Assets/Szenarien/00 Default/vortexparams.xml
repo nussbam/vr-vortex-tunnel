@@ -1,10 +1,16 @@
-﻿<VortexTunnel intro="off" durchmesser="6">
+﻿<VortexTunnel durchmesser="6">
     
 	<Abschnitte>
 		<Abschnitt> <!--Tunnelabschnitt -->
-			<Typ>gerade</Typ>
-			<Steg>gitter</Steg>
-			<Laenge>20</Laenge>
+      <Laenge>20</Laenge>
+			<Steg>
+        <Hoehe>-1</Hoehe>
+        <Breite>1</Breite>
+        <Textur>gittersteg.png</Textur>
+        <Gelaender>on</Gelaender>
+        <Transparenz>1</Transparenz>
+      </Steg>
+			
 			<Wandmuster>
 				<Textur>
 					<Name>spotlight_texture.png</Name>

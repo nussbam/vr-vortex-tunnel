@@ -24,7 +24,6 @@
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="abstract.html">Abstract</a></li>
                             <li class="active"><a href="#">Tutorials</a></li>
                             <li><a href="dokumentation.html">Technische Dokumentation</a></li>
                             <li><a href="testing.html">Testing</a></li>
@@ -44,21 +43,79 @@
 
                     <h3>Übersicht</h3>
                     <ul>
+                        <li> <a href="#ErsteSchritte">Erste Schritte mit Unity </a> <a href="Content/pdfs/Tutorial_Erste_Schritte_mit_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
                         <li> <a href="#EinbindungVR">Einbindung von VR in Unity </a> <a href="Content/pdfs/Tutorial_Einbindung_von_VR_in_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
-                        <li> <a href="#VerwendungGIT">Verwendung von GIT mit Unity </a> </li>
-                        <li> <a href="#UnityXML">Lesen einer XML-Datei mit Unity </a> </li>
-                        <li> <a href="#ImportAssets">Importieren externer Assets in Unity</a> </li>
-                        <li> <a href="#UnityPrefabs">Erstellung und Verwendung von Prefabs in Unity </a> </li>
-
-                        <li>...?</li>
+                        <li> <a href="#VerwendungGIT">Verwendung von GIT mit Unity </a> <a href="Content/pdfs/Tutorial_Verwendung_GIT_mit_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
+                        <li> <a href="#UnityXML">Lesen einer XML-Datei mit Unity </a> <a href="Content/pdfs/Tutorial_XML_laden_in_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
+                        <li> <a href="#ImportAssets">Importieren externer Assets in Unity</a> <a href="Content/pdfs/Tutorial_Importierung_externer_Assets.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
+                        <li> <a href="#UnityPrefabs">Verwendung von Prefabs in Unity </a> <a href="Content/pdfs/Tutorial_Prefabs_in_Unity.pdf" style="color:black;">(PDF <i class="fa fa-file-pdf-o" style="color:red"></i>) </a></li>
                     </ul>
                 </article>
 
                 <article class="col-sm-8">
 
+                    <h3 id="ErsteSchritte">Erste Schritte mit Unity</h3>
+                    <h4>Benötigte Vorkenntnisse</h4>
+                    <ul>
+                        <li>Grundkenntnisse mit C#</li>
+                    </ul>
+                    <h4>Ziele</h4>
+                    <ul>
+                        <li>Autonome Verwendung von Unity</li>
+                        <li>Wichtigste Grundlagen für ein Unity-Projekt</li>
+
+                    </ul>
+                    <h4>Anleitung</h4>
+
+                    <p>
+                        Unity bietet eine fast unüberschaubare Liste an Tutorials und Beispielprojekten an. Zudem gibt es diverse Foren und natürlich Stackoverflow. Untenstehend sind die in unseren Augen hilfreichsten Tutorials um sich die Grundlagen von Unity anzueignen:
+                    </p>
+                    <ul>
+                        <li>Grundlegende Funktionsweise Unity </br>
+                            Das absolute Muss-Tutorial falls man noch nie mit Unity gearbeitet hat ist das «Roll-a-ball»-Tutorial. Dort werden die wichtigsten Prinzipien in Unity erklärt:</li>
+                        <ul type="a">
+                            <li>Einrichten und Verwenden von Unity</li>
+                            <li>Bewegen eines Objektes</li>
+                            <li>Einbinden eines Scripts an ein Objekt</li>
+                            <li>Verwendung der Kamera</li>
+                        </ul>
+
+                        <p>
+                        <a href="https://unity3d.com/de/learn/tutorials/s/roll-ball-tutorial">https://unity3d.com/de/learn/tutorials/s/roll-ball-tutorial</a> (6.12.2017)
+                        </p>
+                        <li>
+                            Verwendung GIT mit Unity </br>
+                            GIT macht Probleme mit Unity falls man es nicht richtig einstellt. Es ist aufwändig temporäre Dateien wieder aus dem Repository zu entfernen und Konflikte bei jedem push zu lösen. Folgendes wird genau erklärt:
+                        </li>
+                        <ul>
+                            <li>Notwendige Einstellungen in Unity</li>
+                            <li>Erstellung und Verwendung einer .gitignore-Datei für Unity-Projekte</li>
+                        </ul>
+                        <p>
+                            <a href="#VerwendungGIT">Verwendung von GIT mit Unity </a>
+                        </p>
+
+                        <li>
+                            Prefabs-Konzept </br>
+                            Prefabs sind ein Grundkonzept welches notwendig wird, sobald man ein Objekt dynamisch generieren will. Folgendes wird im Tutorial genau erklärt:
+                        </li>
+                        <ul>
+                            <li>Grundlagen hinter Prefabs</li>
+                            <li>Dynamische Generierung eines Objektes (mit angehängtem Script)</li>
+                        </ul>
+                        <p>
+                            <a href="#UnityPrefabs">Tutorial Prefabs in Unity </a>
+                        </p>
+
+                    </ul>
+                    <h4>Referenzen</h4>
+                    <p>
+                        <a href="https://www.raywenderlich.com/149239/htc-vive-tutorial-unity">https://unity3d.com/de/learn/tutorials/s/roll-ball-tutorial</a> (6.12.2017)
+                    </p>
 
 
-                    <h3 id="EinbindungVR">Einbindung von VR in Unity</h3>
+
+                    <h3 id="EinbindungVR" style="margin-top: 60px; padding-top: 60px; border-top: 1px solid gray;">Einbindung von VR in Unity</h3>
                     <h4>Benötigte Vorkenntnisse</h4>
                     <ul>
                         <li><a href="https://unity3d.com/de/learn/tutorials/projects/roll-ball-tutorial">Grundlagen</a></li>
@@ -98,7 +155,7 @@
 
 
 
-                    <h3 id="VerwendungGIT">Verwendung von GIT mit Unity</h3>
+                    <h3 id="VerwendungGIT" style="margin-top: 60px; padding-top: 60px; border-top: 1px solid gray;">Verwendung von GIT mit Unity</h3>
                     <h4>Benötigte Vorkenntnisse</h4>
                     <ul>
                         <li>Grundlagen Verwendung von Versionskontrollsystemen</li>
@@ -212,39 +269,160 @@
 
 
 
-                    <h3 id="UnityXML">Lesen einer XML-Datei mit Unity</h3>
+                    <h3 id="UnityXML" style="margin-top: 60px; padding-top: 60px; border-top: 1px solid gray;">Lesen einer XML-Datei mit Unity</h3>
                     <h4>Benötigte Vorkenntnisse</h4>
                     <ul>
-                        <li><a href="https://unity3d.com/de/learn/tutorials/projects/roll-ball-tutorial">Grundlagen</a></li>
+                        <li>Grundlagen der objektorientierten Programmierung</li>
+                        <li>Grundlagen von XML</li>
+                        <li>Grundkenntnisse von C#</li>
                     </ul>
                     <h4>Ziele</h4>
                     <ul>
-                        <li></li>
-                        <li></li>
+                        <li>Eine XML-Datei auslesen zur Weiterverwendung in Unity</li>
                     </ul>
                     <h4>Anleitung</h4>
                     <ol>
-                        <li></li>
-                        <li></li>
+                        <li>
+                            Falls noch keine XML-Datei gegeben ist: Definiere die Struktur der XML-Datei. Das untenstehende Beispiel zeigt eine verschachtelte Struktur. Innerhalb des „Abschnitte“-Tags gibt es das sich wiederholende Element „Abschnitt“. Alle Abschnitte sollen also ausgelesen werden. Zusätzlich müssen die beiden Parameter („intro“ und „durchmesser“) auf dem Root-Element gelesen werden.
+                        </li>
+                        <img src="Content/images/tutorials/XmlUnity/xmlStruktur.jpg" class="smallImage"/>
+                        <p>Die XML-Datei sollte im Unterordner „Assets“ des Unity-Projekts abgelegt werden. Dort kann die Datei auch nach dem Deployment noch eingesehen, geändert oder ausgetauscht werden.</p>
+                        <li>Erstelle einen „Scripts“-Ordner im Unity-Projekt, als Unterordner von „Assets“ (falls „Scripts“-Ordner noch nicht vorhanden). Bei grösserer Anzahl an Scripts empfiehlt es sich, darin einen weiteren Unterordner „XML“ (o.ä.) zu erstellen, ausschliesslich zur Übersichtlichkeit.</li>
+                        <img src="Content/images/tutorials/XmlUnity/scriptsOrdner.jpg" class="smallImage"/>
+                        <li>Definiere C#-Klassen analog zur XML-Struktur.</li>
+                        <p>Schlussendlich möchten wir in diesem Beispiel eine Klasse „VortexTunnel“ haben, die über eine Liste von „Abschnitt“-Objekten verfügt. Über eine statische Methode „Load“ direkt auf der VortexTunnel-Klasse soll dann ein Objekt erstellt werden, welches direkt die aus der XML-Datei geladenen Werte enthält. Folgendes Klassendiagramm soll veranschaulichen, wie die XML-Struktur aus Schritt 1 in eine Klassen-Struktur umgewandelt werden kann:</p>
+                        <img src="Content/images/tutorials/XmlUnity/analogeKlassen.jpg" class="smallImage"/>
+                        <p>
+                            Um späteren zusätzlichen Aufwand zu minimieren empfiehlt es sich zudem, dass die Namensgebung der C# Klassen und derer Klassenvariablen mit der Namensgebung in der Xml-Datei übereinstimmen. Achtung: Dabei ist auch auf die Gross-Kleinschreibung zu achten! </br>
+                            Es ist ausserdem anzumerken, dass eine C#-Klasse, die in Unity erstellt wird, standardmässig immer von MonoDevelop erbt. Für die soeben erstellten Klassen ist dies jedoch <b>nicht</b> notwendig.
+                        </p>
+                        <li>Damit die XML-Datei später korrekt in ein Objekt „übersetzt“ wird, sind in folgenden Fällen noch Annotations im C#-Code notwendig:</li>
                         <ol type="a">
-                            <li></li>
+                            <li>Wenn ein C#-Attribut auf ein XML-Element abgebildet werden soll, aber die Namensgebung in C# und XML sich unterscheiden, dann ist eine „XmlElement“-Annotation notwendig, welche den Namen des Xml-Knotens spezifiziert:</li>
+                            <img src="Content/images/tutorials/XmlUnity/xmlElementNamensgebung.jpg" class="smallImage"/>
+                            <p>Ist die Namensgebung in C# und XML jedoch identisch, dann kann diese Annotation weggelassen werden.</p>
+                            <li>Wenn ein Attribut (nicht Element!) aus der XML-Datei auf ein Attribut der Klasse gemappt werden soll, dann muss dies über eine „XmlAttribute“-Annotation angegeben werden. In unserem Beispiel wären dies also die beiden Attribute „intro“ und „durchmesser“ auf dem VortexTunnel-Element, welche entsprechend in der VortexTunnel-Klasse vermerkt werden:</li>
+                            <img src="Content/images/tutorials/XmlUnity/xmlAttribut.jpg" class="smallImage"/>
+                            <li>Wenn sich eine unbestimmte Anzahl an (gleich strukturierten) Elementen innerhalb eines XML-Elements befindet, dann ist eine „XmlArray“-Annotation notwendig. In unserem Beispiel ist dies der Fall beim „Abschnitte“-Element, da dieses eine beliebige Anzahl an „Abschnitt“-Elementen beinhalten kann:</li>
+                            <img src="Content/images/tutorials/XmlUnity/xmlArray.jpg" class="smallImage"/>
                         </ol>
+
+                        <li>Wenn die Klassen übereinstimmend zur XML-Struktur erstellt wurden, dann kann die XML-Datei jetzt in ein Objekt des Root-Typen, in diesem Fall ein VortexTunnel-Objekt, geladen werden. In diesem Beispiel wird dies direkt in der statischen Methode Load der VortexTunnel-Klasse gemacht. Zuerst benötigt die VortexTunnel-Klasse jedoch noch folgende Referenzen:</li>
+                        <img src="Content/images/tutorials/XmlUnity/xmlLibraries.jpg" class="smallImage"/>
+                        <p>Danach kann die Load-Methode implementiert werden:</p>
+                        <img src="Content/images/tutorials/XmlUnity/xmlSerializer.jpg" class="smallImage"/>
+
+                        <li>Nun muss die Load-Methode nur noch mit einem gültigen Pfad aufgerufen werden.</li>
+                        <img src="Content/images/tutorials/XmlUnity/xmlLoad.jpg" class="smallImage"/>
+                        <p>Das soeben erstellte Objekt „vortex“ beinhaltet nun alle Informationen aus der XML-Datei.</p>
                     </ol>
 
                     <h4>Referenzen</h4>
-                    <a href="https://www.raywenderlich.com/149239/htc-vive-tutorial-unity">https://www.raywenderlich.com/149239/htc-vive-tutorial-unity</a> (01.11.2017)
+                    <a href="http://web.archive.org/web/20130921190426/http://tech.pro/tutorial/798/csharp-tutorial-xml-serialization">http://web.archive.org/web/20130921190426/http://tech.pro/tutorial/798/csharp-tutorial-xml-serialization</a> (01.11.2017)
 
 
-
-                    <h3 id="ImportAssets">Importieren externen Assets in Unity</h3>
+                    <h3 id="ImportAssets" style="margin-top: 60px; padding-top: 60px; border-top: 1px solid gray;">Importieren externer Assets in Unity</h3>
+                    <h4>Benötigte Vorkenntnisse</h4>
+                    <ul>
+                        <li>Empfohlen: <a href="#ErsteSchritte">Erste Schritte mit Unity</a></li>
+                    </ul>
+                    <h4>Ziele</h4>
+                    <ul>
+                        <li>Externe Assets wie beispielsweise 3D-Modelle in Unity importieren und verwenden</li>
+                    </ul>
+                    <h4>Anleitung</h4>
                     <p>
-                        add tutorial here
+                        Je nach Anwendungsfall werden sehr spezifische Assets gebraucht, die neu erstellt werden müssen. In vielen Fällen reicht es jedoch aus, wenn fertige Assets verwendet werden, die im integrierten Asset Store von Unity heruntergeladen werden können. Dieses Tutorial soll beide Fälle aufzeigen.
                     </p>
 
-                    <h3 id="UnityPrefabs">Erstellung und Verwendung von Prefabs in Unity</h3>
+                    <h5 style="font-size:16px;">Importieren aus dem Asset Store</h5>
+                    <ol type="a">
+                        <li>Öffnen Sie das Unity-Projekt, in welchem die Assets aus dem Store benötigt werden.</li>
+                        <li>Öffnen Sie den Asset Store, indem Sie auf das entsprechnde Tab klicken:</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/assetStore.jpg" class="smallImage"/>
+                        <li>Am oberen Ende des nun geöffneten Tabs befindet sich ein Suchfeld. Geben Sie hier Ihren Suchbegriff ein. Alternativ kann der Asset Store auch über die Kategorienliste auf der rechten Seite durchsucht werden.</li>
+                        <li>Starten Sie die Suche mit Enter oder über das Lupe-Symbol in der oberen rechten Ecke. Sofort wird das Suchergebnis angezeigt. Darüber können noch Filter gesetzt werden. In diesem Beispiel wird ausschliesslich nach kostenlosen Natur-Assets gesucht:</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/assetStore2.jpg" class="smallImage"/>
+                        <li>Ist ein passendes Asset im Suchergebnis gefunden, dann wählen Sie dieses aus. Dieses wird nun im Detail angezeigt. Der genaue Inhalt des Asset-Pakets, sowie deren Version, benötigte Speichergrösse, etc. werden ersichtlich wenn Sie nach unten scrollen. Entspricht alles den Vorstellungen, dann klicken Sie auf „Download“.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/assetStore3.jpg" class="smallImage"/>
+                        <li>Es öffnet sich ein Fenster, welches die genaue Ordnerstruktur des Asset-Pakets anzeigt. Hier können nicht benötigte Teile deselektiert werden. Ist die Selektion abgeschlossen, dann bestätigen Sie mit „Import“.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/assetStore4.jpg" class="smallImage"/>
+                        <li>Alle selektierten Assets werden jetzt heruntergeladen und erscheinen automatisch im „Project“-Fenster von Unity. Dort liegt das gesamte Paket im „Assets“-Ordner, bereit zum Verwenden.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/assetsFolder.jpg" class="smallImage"/>
+                    </ol>
+
+                    <h5 style="font-size:16px;">Importieren eigener Assets am Beispiel von Google Sketchup</h5>
                     <p>
-                        add tutorial here
+                        Bei Assets kann es sich um 3D-Modelle, Bilder, Musik, Videos oder anderes handeln. Wichtig ist, dass die Datei in ein Format gebracht wird, welches von Unity geladen werden kann. Informationen zu unterstützten Datei-Endungen finden Sie unter: </br>
+                        <a href="https://docs.unity3d.com/455/Documentation/Manual/ImportingAssets.html">https://docs.unity3d.com/455/Documentation/Manual/ImportingAssets.html</a> </br>
+                        In diesem Beispiel wird gezeigt, wie ein 3D-Modell aus Google Sketchup exportiert und in Unity importiert wird. Der Prozess des Modellierens in Sketchup wird hier nicht weiter erläutert. Auch das ist jedoch keine Hexerei und kann z.B. auf <a href="https://www.sketchup.com/learn">https://www.sketchup.com/learn</a> erlernt werden.
                     </p>
+
+                    <ol>
+                        <li>Öffnen Sie ihr fertiges 3D-Modell in Google Sketchup (.skp-Datei). Wählen Sie dann Datei -> Exportieren -> 3D-Modell.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/sketchupExport.jpg" class="smallImage"/>
+                        <li>Wählen Sie den Ort aus, wohin die Datei exportiert werden soll. Dies kann direkt der Assets-Ordner Ihres Unity-Projektes sein. Wählen Sie zudem die Dateiendung „.dae“ aus.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/sketchupDAE.jpg" class="smallImage"/>
+                        <li>Klicken Sie auf „Exportieren. Falls Sie die Datei nicht direkt in den Assets-Ordner exportiert haben, dann kopieren Sie die Datei nun dorthin. In Unity ist das neue Asset nun auch sichtbar. Ziehen Sie es ganz einfach aus dem „Project“-Fenster in das „Scene“-Fenster um das neue Asset in der Szene zu platzieren.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/unityImport.jpg" class="smallImage"/>
+                    </ol>
+
+                    <h5 style="font-size:16px;">Tip zur Arbeit mit Unity und Google Sketchup</h5>
+                    <p>
+                        Bereits beim Erstellen des Modells in Sketchup können Sie sich später viel Zeit und Mühe sparen. Das Modell wird später in Unity bestimmte Grössenverhältnisse haben, die ganz einfach in „Unity-Metern“ gemessen wird. Damit das Modell später nicht neu skaliert- und auf andere Objekte angepasst werden muss, lohnt es sich Google Sketchup auch auf „Unity-Meter“ einzustellen.
+                    </p>
+                    <ol>
+                        <li>Klicken Sie in Sketchup auf Fenster -> Modellinformationen.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/sketchupUnits.jpg" class="smallImage"/>
+                        <li>Wählen Sie den Punkt „Einheiten“ aus. Stellen Sie nun die Längeneinheiten auf Dezimal Zoll ein. Schliessen Sie das Fenster wieder. Die Änderungen werden von Sketchup automatisch übernommen, jedoch muss dies für jede neue Datei wieder eingestellt werden. Ein Dezimal Zoll in Sketchup entspricht einem „Unity Meter“.</li>
+                        <img src="Content/images/tutorials/AssetsImportieren/sketchupUnits2.jpg" class="smallImage"/>
+                    </ol>
+
+                    <h4>Referenzen</h4>
+                    <ul>
+                        <li><a href="https://docs.unity3d.com/Manual/ImportingAssets.html">https://docs.unity3d.com/Manual/ImportingAssets.html</a> (4.12.2017)</li>
+                        <li><a href="https://docs.unity3d.com/Manual/HOWTO-importObject.html">https://docs.unity3d.com/Manual/HOWTO-importObject.html</a> (4.12.2017)</li>
+
+                    </ul>
+
+                    <h3 id="UnityPrefabs" style="margin-top: 60px; padding-top: 60px; border-top: 1px solid gray;">Verwendung von Prefabs in Unity</h3>
+                    <h4>Benötigte Vorkenntnisse</h4>
+                    <ul>
+                        <li>Grundlagen Verwendung Unity</li>
+                        <li>Prefabs erstellen: <a href="https://unity3d.com/de/learn/tutorials/topics/interface-essentials/prefabs-concept-usage">https://unity3d.com/de/learn/tutorials/topics/interface-essentials/prefabs-concept-usage</a> (4.12.2017) </li>
+                        <li>Empfohlen: Grundkenntnisse C#</li>
+                    </ul>
+
+                    <h4>Ziele</h4>
+                    <ul>
+                        <li>Zur Laufzeit Objekte anhand der Prefab-Definition erzeugen (mit einem C# Script)</li>
+                    </ul>
+
+                    <h4>Anleitung</h4>
+                    <p>
+                        Ein Prefab in Unity ist wie eine Art Schablone, aus welcher beliebig viele neue (Game-)Objekte erzeugt werden können. Sie sollten für dieses Tutorial bereits ein Prefab im „Assets“-Ordner Ihres Unity Projekts haben. Die folgenden Schritte zeigen auf, wie eine instanz eines solchen Prefabs zur Laufzeit erzeugt werden kann:
+                    </p>
+
+                    <ol>
+                        <li>Erstellen Sie zuerst einen Unterordner „Resources“ im Assets-Ordner. Die korrekte Namensgebung ist wichtig, da Unity nur Prefabs aus dem Resources-Ordner zur Laufzeit laden kann.</li>
+                        <li>Nun wird ein Script benötigt, welches eine oder mehrere Instanzen des prefabs erzeugt. Scripts bewirken in Unity nur etwas, wenn sie an ein GameObject angehängt sind, welches in der Szene platziert wurde. Erstellen sie darum ein neues leeres GameObject über GameObject -> Create Empy.</li>
+                        <li>Geben Sie dem neuen GameObject einen vielsagenden Namen. In diesem Beispiel heisst es „Tunnel_Builder“, da das Skript später dafür sorgen wird, dass ein Tunnel aus mehreren Abschnitten zusammengebaut wird. Die Tunnel-Abschnitte wurden natürlich als Prefabs im Assets-Ordner erstellt.</li>
+                        <li>Selektieren Sie das neue GameObject in der Hierarchy View und klicken Sie dann in der Inspector-View den Button „Add-Component“.</li>
+                        <img src="Content/images/tutorials/UnityPrefabs/addComponent.jpg" class="smallImage"/>
+                        <li>Scrollen Sie ganz nach unten und wählen Sie „New Script“. Es öffnet sich ein weiterer Dialog. Wählen Sie dort als Sprache C# und benennen Sie das Script sinnvoll. Schliessen Sie den Dialog mit „Create and Add“ ab. Das Script sollte jetzt als Komponente des GameObjects sichtbar sein.</li>
+                        <img src="Content/images/tutorials/UnityPrefabs/addedScript.jpg" class="smallImage"/>
+                        <li>Nun folgt der eigentliche Code, der Instanzen aus einem Prefab erzeugen soll. Rechtsklicken Sie auf das Skript und wählen Sie „Edit“ um es zu Bearbeiten. Der TunnelBuilder soll beim Start des Programms einen Tunnel erzeugen. Daher wird der folgende Code in die Start()-Methode geschrieben. Möglich wäre natürlich auch, dass Instanzen von Prefabs im Verlaufe des Programms erst benötigt werden. Dann müsste der Code in der Update()-Methode stehen. In diesem Falle darf aber eine Bedingung nicht fehlen, da sonst zu jedem Frame neue Instanzen erzeugt werden.</br>
+                            Der Code kann in einer Zeile geschrieben werden. Ersetzen Sie den String (“TunnelStraightScaled”) mit dem Namen Ihres Prefabs:
+                        </li>
+                        <img src="Content/images/tutorials/UnityPrefabs/resourcesLoad.jpg" class="smallImage"/>
+                        <li>Starten Sie nun das Programm über den Play-Button in Unity. Wenn alles geklappt hat, dann sehen Sie nun in im Hierarchy Fenster ihre „Klone“, also die Instanzen, welche aus dem Prefab erzeugt wurden. Natürlich sehen sie (je nach Prefab) auch direkt das Ergebnis in der Scene- oder Game-View.</li>
+                        <img src="Content/images/tutorials/UnityPrefabs/prefabClone.jpg" class="smallImage"/>
+                    </ol>
+
+                    <h4>Referenzen</h4>
+                    <ul>
+                        <li><a href="https://docs.unity3d.com/ScriptReference/Resources.Load.html">https://docs.unity3d.com/ScriptReference/Resources.Load.html</a> (04.12.2017) </li>
+                    </ul>
                 </article>
 
             </section>
