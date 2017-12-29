@@ -51,16 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BuildTextureTunnel.cs" />
      <Compile Include="Assets\Scripts\BuildTunnel.cs" />
-     <Compile Include="Assets\Scripts\CameraFarClip.cs" />
-     <Compile Include="Assets\Scripts\ChangeColorXML.cs" />
      <Compile Include="Assets\Scripts\ColorChange.cs" />
-     <Compile Include="Assets\Scripts\loadMainScene.cs" />
      <Compile Include="Assets\Scripts\LoadParamsFromXML.cs" />
      <Compile Include="Assets\Scripts\RotateSpotlight.cs" />
      <Compile Include="Assets\Scripts\Section.cs" />
-     <Compile Include="Assets\Scripts\StandardShaderUtils.cs" />
      <Compile Include="Assets\Scripts\Teleporter.cs" />
      <Compile Include="Assets\Scripts\TextureParam.cs" />
      <Compile Include="Assets\Scripts\TurnTexture.cs" />
