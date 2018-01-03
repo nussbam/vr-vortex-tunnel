@@ -47,7 +47,9 @@
                         <li><a href="#Versuchsresultate">Versuchsresultate</a></li>
                         <li><a href="#ErkenntnisseFragebogen">Erkenntnisse Fragebogenauswertung</a></li>
 						<li><a href="#ErkenntnisseBeobachtung">Erkenntnisse Versuchsbeobachtung</a></li>
-                        <li>Zukünftige Fragestellungen</li>
+						<li><a href="#Benutzermeldungen">Rückmeldungen Testprobanden</a></li>
+						<li><a href="#Fazit">Fazit</a></li>
+						<li><a href="#Ausblick">Ausblick</a></li>
                     </ul>
                 </article>
             
@@ -260,27 +262,27 @@
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz1');" id="sz1_radio"/>
-								<label for="sz1_radio">Szenario 1</label>
+								<label for="sz1_radio">Szenario 1 - enger Tunnel</label>
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz2');" id="sz2_radio"/>
-								<label for="sz2_radio">Szenario 2</label>
+								<label for="sz2_radio">Szenario 2 - breiter Tunnel</label>
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz3');" id="sz3_radio"/>
-								<label for="sz3_radio">Szenario 3</label>
+								<label for="sz3_radio">Szenario 3 - schnell drehendes Muster</label>
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz4');" id="sz4_radio"/>
-								<label for="sz4_radio">Szenario 4</label>
+								<label for="sz4_radio">Szenario 4 - langsam drehendes Muster</label>
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz5');" id="sz5_radio"/>
-								<label for="sz5_radio">Szenario 5</label>
+								<label for="sz5_radio">Szenario 5 - weniger Lichter</label>
 							</div>
 							<div class="funkyradio-primary">
 								<input type="radio"name="dataset" onclick="setDataSet('sz6');" id="sz6_radio"/>
-								<label for="sz6_radio">Szenario 6</label>
+								<label for="sz6_radio">Szenario 6 - mehr Lichter</label>
 							</div>
 							
 							
@@ -306,20 +308,22 @@
 					<h3 id='ErkenntnisseFragebogen'>Erkenntnisse Fragebogenauswertung</h3>
 					<h4>Effekt wird kleiner bei mehreren Durchläufen</h4>
 					Anhand der Mittelwerte der Bewertung «Mein Gleichgewichtssinn im Vortex Tunnel war beeinträchtigt» von einer Skala von 1 bis 10 sieht man, dass tendenziell der Effekt weniger stark in späteren Durchgängen wahrgenommen wurde. Einzig die Effektsteigerung in Szenario 2 war stark genug um diesen Effekt entgegen zu wirken.
- 
-					Abbildung 1 Stärke des Gleichgewichtsverlustes anhand Mittelwerte
+					<img src="Content/images/testing/average_tunnel_less_effect.png" >
+					<br />
+					
 					<h4>Enger Tunneldurchmesser ist effektsteigernd</h4>
 					Die Szenarien SZ1 und SZ2 beschäftigen sich mit der unterschiedlichen Effekt-Wahrnehmung bei der Vergrösserung (SZ1) bzw. der Verkleinerung (SZ2) des Tunneldurchmessers. Gemäss Testpersonen wurde in diesem Vergleich die grösste Effektsteigerung des ganzen Versuchsaufbaus festgestellt. So wird der kleinere Tunnel als massiv effektverstärkend gegenüber dem vergrösserten Tunnel wahrgenommen wie in der Tabelle unterhalb sichtbar ist:
-					 
-					Abbildung 2 Beeinflussung Gleichgewichtsverlust durch Tunneldurchmesser
+					<img src="Content/images/testing/average_tunnel_width.png" >
+					<br />
 					<h4>Schneller Tunnel ist effektiver</h4>
 					Die Szenarien SZ3 und SZ4 beschäftigen sich mit der unterschiedlichen Effekt-Wahrnehmung bei der Beschleunigung (SZ3) bzw. der Verlangsamung (SZ4) der Drehgeschwindigkeit des Tunnels. Gemäss Testpersonen wurde der Effekt bei einem schnelleren Tunnel stärker wahrgenommen. Der Effekt war jedoch nicht stark genug um der Effektverkleinerung (siehe weiter oben) vollständig entgegen zu wirken. Somit orten wir den optimalen Wert für die Geschwindigkeit zwischen dem Standard-Szenario und dem Beschleunigungs-Szenario (SZ3).  
-					 
-					Abbildung 3 Beeinflussung Gleichgewichtssinn durch Tunnelgeschwindigkeit
+					<img src="Content/images/testing/average_tunnel_speed.png" >
+					<br />
+					
 					<h4>Viele Lichtquellen sind stärker als wenige starke Lichtquellen</h4>
 					Die Szenarien SZ5 und SZ6 beschäftigen sich mit der unterschiedlichen Effekt-Wahrnehmung bei wenigen starken Lichtquellen (SZ5) bzw. bei vielen schwachen Lichtquellen (SZ6) im Tunnel. Gemäss Testpersonen wurde der Effekt bei vielen schwachen Lichtern stärker wahrgenommen. Der Effekt war jedoch nicht stark genug um der Effektverkleinerung (siehe weiter oben) vollständig entgegen zu wirken. Somit orten wir den optimalen Wert für die Lichtquellen zwischen dem Standard-Szenario und dem Viele-Schwache-Lichter Szenario (SZ6).  
-					 
-					Abbildung 3 Beeinflussung Gleichgewichtssinn durch Lichtquellen im Tunnel
+					<img src="Content/images/testing/average_tunnel_light.png" >
+					<br />
 					
 					<h3 id='ErkenntnisseBeobachtung'>Erkenntnisse Versuchsbeobachtung</h3>
 					Bei der Durchführung des Tests wurden nebst den Auswertungen der Fragebögen folgendes festgestellt:
@@ -357,10 +361,45 @@
 						<li>Versuchsprobanden geben am meisten Rückmeldungen zum Steg und nicht Tunnel</li>
 						Bei Verbesserungsvorschlägen liegt der Fokus klar auf dem Laufsteg und weniger auf dem Tunnel selbst. Dies deckt sich mit der Erkenntnis, dass Testprobanen sich stärker auf den Steg in späteren Szenarien fokussieren (siehe «Testpersonen tendieren darauf den «Steg» zu fokussieren in späteren Durchläufen»)
 					</ul>
-					<p id="demo"></p>
-					
-			
-                    
+					<h3 id='Benutzermeldungen'>Rückmeldungen Testprobanden</h3>
+						Zum Abschluss eines jeden Testdurchlaufes wurden die Testprobanden nach Verbesserungsvorschlägen gefragt. Folgende Rückmeldungen wurden erhalten:
+						<BR />
+						<BR />
+						<ul>
+							<li>Steg soll physikalisch vorhanden sein</li>
+							Es wurde argumentiert, dass die Illusion verloren geht wenn man den Steg nicht mit den Füssen fühlen kann. Zudem fühlt sich der Boden zu trittsicher an, was dazu animiert schneller durch den Tunnel zu laufen.
+							<BR />
+							<BR />
+							<li>Verlassen des Stegs soll Konsequenzen haben</li>
+							Es soll ein Fallen simuliert werden sobald der Benutzer nicht mehr auf dem Steg ist. Dies wurde in Verbindung mit dem physikalischen Steg vorgeschlagen. Hintergrund ist, dass man bereits im Gleichgewicht beeinträchtigt ist was den Effekt verstärken könnte.
+							<BR />
+							<BR />
+							<li>Keine Handgeländer</li>
+							Obwohl das Handgeländer nicht physikalisch vorhanden war führt es zu einem Sicherheitsgefühl. 
+							<BR />
+							<BR />
+							<li>Andere Wandmuster</li>
+							Es wurden Spiralen-Muster als auch optische Täuschungen als mögliche Texturen für den Tunnel vorgeschlagen. Es wird erhofft, dass bei einer Spirale der Benutzer zusätzlich auch in Drehrichtung der Spirale gezogen wird.
+							<BR />
+							<BR />
+							<li>Schütteln des Stegs</li>
+							Es soll ein Steg vorhanden sein, welcher sich leicht bewegt wie etwa eine Hängebrücke. Die Testperson soll leichte Probleme beim Gehen über den Steg verspüren.
+							<BR />
+							<BR />
+							<li>Tunnelrichtung soll abrupt wechseln</li>
+							Die Drehrichtung der Textur und Lichtquellen soll die Richtung wechseln wenn ein bestimmter Punkt im Tunnel erreicht wurde.
+						</ul>
+					<h3 id='Fazit'>Fazit</h3>
+						Aufgrund der Versuchsdurchführung konnte festgestellt werden, dass eine Beeinflussung des Gleichgewichts-Sinnes durch einen virtuellen 
+						Vortex-Tunnel definitiv möglich ist. Zudem kann aufgrund der Versuchsrückmeldungen geschlussfolgert werden, dass ein Tunnel welcher enger, 
+						schneller mit vielen Lichtern bestückter Tunnel einen grösseren Effekt hat. Es konnte auch aufgezeigt werden, dass sich der Gleichgewichts-Sinn 
+						bei mehreren Testdurchläufen verkleinert. 
+					<h3 id='Ausblick'>Ausblick</h3>
+						Für eine präzisere Ergebnisauswertung bietet sich eine erneute Versuchsdurchführung mit einer grösseren Anzahl Testprobanden an um die 
+						Mittelwertanalyse genauer zu machen. Ein interessanter Aspekt welcher noch zu untersuchen ist, wie Probanden bei einem Vortex-Tunnel mit Kurven
+						reagieren. Eine Kurve mit drehender Textur ist in der realen Welt technisch nur sehr schwer zu realisieren, kann jedoch in der virtuellen Welt 
+						relativ einfach erstellt werden. Basierend auf den Benutzer-Rückmeldungen erscheint weitere Forschung mit einer physikalischen Komponente, 
+						wie etwa einem Steg, als empfehlenswert.     
                 </article>
 
 			</section>
