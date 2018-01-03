@@ -1,8 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class BuildTunnel : MonoBehaviour {
 
@@ -14,9 +12,9 @@ public class BuildTunnel : MonoBehaviour {
     IEnumerator Start () {
         tunnelParams.LoadParams(Application.dataPath + "//vortexparams.xml");
 
-
         float tunnelStart;
         float distance = 0;
+
         foreach(Section section in tunnelParams.sections)
         {
             if (distance == 0)
@@ -73,7 +71,7 @@ public class BuildTunnel : MonoBehaviour {
             //Create Spotlights along the tunnel
             generateLights(section, distance);
 
-      
+            //Add up current length of the tunnel
             distance = distance + section.laenge;
 
         }
@@ -85,21 +83,21 @@ public class BuildTunnel : MonoBehaviour {
     {
         for (int i = 0; i < section.anzahlLichter; i++)
         {
-            GameObject spotlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
-            GameObject spotlight_child = spotlight.transform.GetChild(0).gameObject;
-            spotlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser / 2 - 0.5f, 0, 0));
-            spotlight.transform.position = new Vector3(0, 0, Random.Range(distance, distance + section.laenge)); //randomize position
-            spotlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
+            GameObject pointlight = (GameObject)Instantiate(Resources.Load("Rotating_Pointlight"));
+            GameObject pointlight_child = pointlight.transform.GetChild(0).gameObject;
+            pointlight_child.transform.Translate(new Vector3(tunnelParams.durchmesser / 2 - 0.5f, 0, 0));
+            pointlight.transform.position = new Vector3(0, 0, Random.Range(distance, distance + section.laenge)); //randomize position
+            pointlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
 
-            var script = spotlight.GetComponent<RotateSpotlight>();
+            var script = pointlight.GetComponent<RotateSpotlight>();
             script.speed = section.drehgeschwindigkeit;
             float randomizedRed = Random.Range(section.minimumFarbe.r, section.maximumFarbe.r); //randomize color
             float randomizedGreen = Random.Range(section.minimumFarbe.g, section.maximumFarbe.g);
             float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
-            spotlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
+            pointlight_child.GetComponent<Light>().color = new Color(randomizedRed, randomizedGreen, randomizedBlue);
 
-            spotlight_child.GetComponent<Light>().intensity = section.lichtIntensitaet;
-            spotlight_child.GetComponent<Light>().range = section.lichtReichweite;
+            pointlight_child.GetComponent<Light>().intensity = section.lichtIntensitaet;
+            pointlight_child.GetComponent<Light>().range = section.lichtReichweite;
         }
     }
 
