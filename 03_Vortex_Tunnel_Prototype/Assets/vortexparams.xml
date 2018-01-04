@@ -10,7 +10,6 @@
         <Gelaender>on</Gelaender>
         <Transparenz>1</Transparenz>
       </Steg>
-			
 			<Wandmuster>
 				<Textur>
 					<Name>spotlight_texture.png</Name>
@@ -40,9 +39,7 @@
 			...
 		</Abschnitt>
 		-->
+    
 	</Abschnitte>
-
-
-	
 
 </VortexTunnel>

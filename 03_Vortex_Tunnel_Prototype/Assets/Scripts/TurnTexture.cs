@@ -34,11 +34,11 @@ public class TurnTexture : MonoBehaviour {
     {
         if (direction >= 0)
         {
-            this.direction = 1;
+            this.direction = -1;
         }
         else
         {
-            this.direction = -1;
+            this.direction = 1;
         }
     }
 }

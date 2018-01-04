@@ -5,17 +5,17 @@ using System.Xml.Serialization;
 
 public class Farbe{
     [XmlElement]
-    public int MinimumRot;
+    public float MinimumRot;
     [XmlElement]
-    public int MaximumRot;
+    public float MaximumRot;
     [XmlElement]
-    public int MinimumGruen;
+    public float MinimumGruen;
     [XmlElement]
-    public int MaximumGruen;
+    public float MaximumGruen;
     [XmlElement]
-    public int MinimumBlau;
+    public float MinimumBlau;
     [XmlElement]
-    public int MaximumBlau;
+    public float MaximumBlau;
 
 
 }

@@ -316,7 +316,6 @@
     <None Include="Assets\Szenarien\02 Drehgeschwindigkeit\04 Langsamer\vortexparams.xml" />
     <None Include="Assets\Szenarien\03 Lichter\05 Wenige intensive Lichter\vortexparams.xml" />
     <None Include="Assets\Szenarien\03 Lichter\06 Viele schwache Lichter\vortexparams.xml" />
-    <None Include="Assets\Szenarien\04 Experimental\spirale_immer_schneller.xml" />
     <None Include="Assets\Szenarien\04 Experimental\vortexparams.xml" />
     <None Include="Assets\vortexparams.xml" />
   </ItemGroup>

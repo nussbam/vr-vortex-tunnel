@@ -90,7 +90,15 @@ public class BuildTunnel : MonoBehaviour {
             pointlight.transform.Rotate(Vector3.forward, Random.Range(0, 360), Space.Self); //randomize orientation
 
             var script = pointlight.GetComponent<RotateSpotlight>();
-            script.speed = section.drehgeschwindigkeit;
+            if (section.drehrichtung.ToLower() == "rechts")
+            {
+                script.speed = section.drehgeschwindigkeit * (-1);
+            }
+            else
+            {
+                script.speed = section.drehgeschwindigkeit;
+            }
+            
             float randomizedRed = Random.Range(section.minimumFarbe.r, section.maximumFarbe.r); //randomize color
             float randomizedGreen = Random.Range(section.minimumFarbe.g, section.maximumFarbe.g);
             float randomizedBlue = Random.Range(section.minimumFarbe.b, section.maximumFarbe.b);
